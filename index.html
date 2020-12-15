@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./pages/index.css"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Гражданин поэт</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гражданин поэт</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="page">
-    <div class="page__container">
-        <!-- <header class="header">
-          Гражданин поэт 
-        </header> -->
-
-
-        <main class="content">
-         
-          <div class='bg-image'></div>
-          
-
-           
-        </main>
-
-        <section class="description">
-          <h3 class="desctiption-title">Гражданин поэт</h3>
-          <p class="description-text">blablabla</p>
-         </section>
-
-        <footer class="footer">
-            <p class="footer__copyright">&COPY;2020 Citizen Poet</p>
-        </footer>
-
-
-        <!-- popups
-        <div class="popup popup_type_edit-profile" id="edit-profile">
-            <div class="popup__container">
-                <button type="button" class="popup__close-button"></button>
-                <h2 class="popup__title">Редактировать профиль</h2>
-                <form name="popup__form" class="popup__form popup__form_profile" method="get" action="#" novalidate>
-                    <input name="name" placeholder="Введите текст" type="text" required
-                        class="popup__input popup__input_type_name" value="" minlength="2" maxlength="40">
-                    <span class="popup__error" id="name-error"> </span>
-                    <input name="job" placeholder="Введите текст" type="text" required
-                        class="popup__input popup__input_type_job" value="" minlength="2" maxlength="200">
-                    <span class="popup__error" id="job-error"> </span>
-                    <button type="submit" class="popup__button">Сохранить</button> </form>
-            </div> -->
+<body class="body">
+  <page class="root">
+    <main class="main">
+      <section class="hero">
+        <div class="content">
+          <h1 class="content__title">
+            Гражданин поэт
+          </h1>
+          <p class="content__paragraph">
+            C 2023 года правительством Российской Федерации введен в силу закон, устанавливающий формат подачи заявлений и граждаских актов в форме стихов классиков.
+          </p>
+          <p class="content__paragraph">
+            Наш сервис – это самое крупное хранилище стихов в России. С помощью формы вы можете составить
+          </p>
+          <button type="button" class="content__button">Подать заявление</button>
         </div>
-       
+        <img class="main-image" src="./images/img-poet-transp.png" alt="">
+      </section>
+      <aside class="side-block"></aside>
+      <section class="form-container form-container-info ">
+        <form name="form-info" action="POST" action='#' class="form form-info">
+
+         <h2 class="form__title">Расскажите о себе</h2>
+         <div class="form-grid">
+
+          <label class="form__label form__label_type_first-name" for="">Имя
+            <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
+          </label>
+
+          <label class="form__label form__label_type_last-name" for="">Фамилия
+            <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию">
+          </label>
+
+          <label class="form__label form__label_type_phone" for="">Телефон
+            <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -">
+          </label>
+
+          <label class="form__label form__label_type_email" for="">Электронная почта
+            <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email">
+          </label>
+
+          <label class="form__label form__label_type_address" for="">Адрес
+            <input type="text" class="form__input form__input_type_address" placeholder="Введите свой адрес прописки">
+          </label>
 
 
+        </div>
+        <p class="form__terms-of-use">
+          Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
+          связанные с отправкой вашего заявления в государственные инстанции.
+        </p>
 
-        
+        <div class="form-button-container">
+          <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
+          <button id="form-info-forvard-button"type="button" class="form-button form-button_type_forvard ">Далее</button>
+        </div>
 
 
-        
+        </form>
+      </section>
+    </main>
 
-        <!-- <script type='module' src="./src/index.js"></script>  -->
+  </page>
+  <script src="./scripts/index.js"></script>
 </body>
-
 </html>
