@@ -1,0 +1,197 @@
+@import url("./vendor/normalize.css");
+@import url("./vendor/fonts/Playfair_Display_SC/PlayfairDisplaySC.css");
+@import url("./vendor/fonts/Roboto/Roboto.css");
+@import url("./vendor/fonts/Roboto_Slab/roboto_slab.css");
+
+* {
+    box-sizing: border-box;
+}
+.body {
+
+    background-color: #F4ECD6;
+}
+
+.root {
+    max-width: 1440px;
+    min-width: 320px;
+    max-height: 900px;
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 551px;
+    margin: 112px 0 0 128px;
+    z-index: 1;
+}
+
+.content__title {
+    margin: 0 0 72px 0;
+    font-weight: 700;
+    font-family: "PlayfairDisplaySC", "Georgia", serif;
+    font-size: 58px;
+    line-height: 77px;
+}
+
+.content__paragraph {
+    font-size: 20px;
+    line-height: 140%;
+    margin: 0 0 24px 0;
+    font-weight: 400;
+    font-family: "RobotoSlab", "Georgia", serif;
+}
+
+.content__paragraph:last-of-type {
+    margin-bottom: 200px;
+}
+
+.content__button {
+    width: 319px;
+    height: 80px;
+    background: #262A4F;
+    border-radius: 4px;
+    color: #FFF;
+    border-radius: 4px;
+    z-index: 1;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-family: "RobotoSlab", "Georgia", serif;
+}
+
+
+.main-image {
+    width: 1078px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.side-block {
+    display: none;
+    width: 312px;
+    height: 900px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #262A4F;
+}
+
+.side-block_visible {
+    display: block;
+}
+
+.form-container {
+    display: none;
+    width: 584px;
+    height: 760px;
+    position: absolute;
+    top: 64px;
+    left: 128px;
+    background-color: #F8F8F5;
+    z-index: 3;
+}
+
+.form-container_visible {
+    display: block;
+}
+
+.form__title {
+    margin-left: 56px;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 48px;
+    color: #262A4F;
+    font-weight: 700;
+    font-family: "PlayfairDisplaySC", "Georgia", serif;
+}
+
+.form-grid {
+    /* outline: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, 224px);
+    gap: 64px 24px ;
+    width: calc(100% - (56px*2));
+    margin: 40px auto 128px;
+}
+
+.form__label_type_address {
+    grid-column: 1 / 3;
+}
+
+
+.form__label {
+    font-size: 18px;
+    line-height: 16px;
+    color: #262A4F;
+    font-weight: 400;
+    font-family: "RobotoSlab", "Georgia", serif;
+
+}
+
+.form__input {
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    padding: 0 0 2px 0;
+    width: 100%;
+    margin-top: 16px;
+    font-weight: 400;
+    font-family: "RobotoSlab", "Georgia", serif;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: #F8F8F5;
+
+
+}
+
+input::-webkit-input-placeholder { color: #D0D0CEed; }
+input::-moz-placeholder { color: #D0D0CEed; }
+
+.form__terms-of-use {
+    font-weight: 400;
+    font-family: "Roboto", "Georgia", serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5C5B5B;
+    width: 476px;
+    margin: 0 0 40px 56px;
+}
+
+.form-button-container {
+
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - (56px*2));
+    margin: 0 auto;
+}
+
+.form-button {
+    width: 178px;
+    height: 53px;
+    border: 2px solid #262A4F;
+    border-radius: 4px;
+    font-weight: 400;
+    font-family: "RobotoSlab", "Georgia", serif;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 0;
+    margin: 0;
+    background-color: #F8F8F5;
+}
+
+
+.form-button_type_forvard {
+    background-color: #262A4F;
+    color: #fff;
+}
