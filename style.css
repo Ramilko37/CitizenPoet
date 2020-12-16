@@ -38,6 +38,16 @@
     color: #262A4F;
 }
 
+.content__title-send  {
+  font-family: "PlayfairDisplaySC";
+font-style: normal;
+font-weight: 900;
+font-size: 44px;
+line-height: 110%;
+margin: 56px 58px 40px 56px;
+
+}
+
 .content__paragraph {
     font-size: 20px;
     line-height: 140%;
@@ -48,6 +58,17 @@
 
 .content__paragraph:last-of-type {
     margin-bottom: 200px;
+}
+
+
+.content__paragraph-send {
+  font-family: "Roboto";
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 120%;
+margin: 0 110px 76px 56px;
+
 }
 
 .content__button {
@@ -68,6 +89,11 @@
     font-family: "RobotoSlab", "Georgia", serif;
 }
 
+.content__button_send {
+  width: 178px;
+  height: 53px;
+  margin: 0 203px 64px 203px;
+}
 
 .main-image {
     width: 1078px;
@@ -169,6 +195,19 @@ input::-moz-placeholder { color: #D0D0CEed; }
     color: #5C5B5B;
     width: 476px;
     margin: 0 0 40px 56px;
+}
+
+
+.form-send {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 584px;
+  height: 453px;
+  border: 1px solid red;
+  padding: 0;
+  margin: 0;
+  background-color: #F8F8F5;
 }
 
 .form-button-container {
