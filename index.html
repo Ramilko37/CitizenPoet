@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Гражданин поэт</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="body">
   <page class="root">
     <main class="main">
@@ -15,10 +17,12 @@
             Гражданин поэт
           </h1>
           <p class="content__paragraph">
-            C 2023 года правительством Российской Федерации введен в силу закон, устанавливающий формат подачи заявлений и граждаских актов в форме стихов классиков.
+            С 2023 года правительством Российской Федерации введен в силу закон,
+            устанавливающий формат подачи заявлений и гражданских актов в виде стихов поэтов-классиков.
           </p>
           <p class="content__paragraph">
-            Наш сервис – это самое крупное хранилище стихов в России. С помощью формы вы можете составить
+            Наш сервис – это самое крупное хранилище стихов
+            в России. Заполните форму, и мы отправим ваше заявление по всем правилам.
           </p>
           <button type="button" class="content__button">Подать заявление</button>
         </div>
@@ -27,48 +31,88 @@
       <aside class="side-block"></aside>
       <section class="form-container form-container-info ">
         <form name="form-info" action="POST" action='#' class="form form-info">
-
-         <h2 class="form__title">Расскажите о себе</h2>
-         <div class="form-grid">
-
-          <label class="form__label form__label_type_first-name" for="">Имя
-            <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
-          </label>
-
-          <label class="form__label form__label_type_last-name" for="">Фамилия
-            <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию">
-          </label>
-
-          <label class="form__label form__label_type_phone" for="">Телефон
-            <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -">
-          </label>
-
-          <label class="form__label form__label_type_email" for="">Электронная почта
-            <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email">
-          </label>
-
-          <label class="form__label form__label_type_address" for="">Адрес
-            <input type="text" class="form__input form__input_type_address" placeholder="Введите свой адрес прописки">
-          </label>
-
-
-        </div>
-        <p class="form__terms-of-use">
-          Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
-          связанные с отправкой вашего заявления в государственные инстанции.
-        </p>
-
-        <div class="form-button-container">
-          <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
-          <button id="form-info-forvard-button"type="button" class="form-button form-button_type_forvard ">Далее</button>
-        </div>
-
-
+          <h2 class="form__title">Расскажите о себе</h2>
+          <div class="form-grid">
+            <label class="form__label form__label_type_first-name" for="">Имя
+              <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
+            </label>
+            <label class="form__label form__label_type_last-name" for="">Фамилия
+              <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию">
+            </label>
+            <label class="form__label form__label_type_phone" for="">Телефон
+              <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -">
+            </label>
+            <label class="form__label form__label_type_email" for="">Электронная почта
+              <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email">
+            </label>
+            <label class="form__label form__label_type_address" for="">Адрес
+              <input type="text" class="form__input form__input_type_address" placeholder="Введите свой адрес прописки">
+            </label>
+          </div>
+          <p class="form__terms-of-use">
+            Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
+            связанные с отправкой вашего заявления в государственные инстанции.
+          </p>
+          <div class="form-button-container">
+            <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
+            <button id="form-info-forvard-button" type="button"
+              class="form-button form-button_type_forvard ">Далее</button>
+          </div>
         </form>
       </section>
+      <!-- <section class="form-container form-container-ministry form-container_visible">
+        <form name="form-ministry" action="POST" action='#' class="form form-ministry">
+          <h2 class="form__title">Расскажите о себе</h2>
+          <div class="form-flex">
+            <div class="form-flex__item">
+              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+              <span class="form-flex__caption">Правды</span>
+            </div>
+            <div class="form-flex__item">
+              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+              <span class="form-flex__caption">Правды</span>
+            </div>
+            <div class="form-flex__item">
+              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+              <span class="form-flex__caption">Правды</span>
+            </div>
+            <div class="form-flex__item">
+              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+              <span class="form-flex__caption">Правды</span>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label class="form__label form__label_type_first-name" for="">Имя
+              <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
+            </label>
+            <label class="form__label form__label_type_last-name" for="">Фамилия
+              <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию">
+            </label>
+            <label class="form__label form__label_type_phone" for="">Телефон
+              <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -">
+            </label>
+            <label class="form__label form__label_type_email" for="">Электронная почта
+              <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email">
+            </label>
+            <label class="form__label form__label_type_address" for="">Адрес
+              <input type="text" class="form__input form__input_type_address" placeholder="Введите свой адрес прописки">
+            </label>
+          </div>
+          <p class="form__terms-of-use">
+            Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
+            связанные с отправкой вашего заявления в государственные инстанции.
+          </p>
+          <div class="form-button-container">
+            <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
+            <button id="form-info-forvard-button" type="button"
+              class="form-button form-button_type_forvard ">Далее</button>
+          </div>
+        </form>
+      </section> -->
     </main>
 
   </page>
   <script src="./scripts/index.js"></script>
 </body>
+
 </html>
