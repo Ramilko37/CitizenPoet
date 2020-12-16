@@ -4,4 +4,5 @@
 @import url('../blocks/content/content.css');
 @import url('../blocks/title/title.css');
 @import url('../blocks/bg-image/bg-image.css');
-@import url('../blocks/description/description.css')
+@import url('../blocks/description/description.css');
+@import url('../blocks/popup/popup.css');
