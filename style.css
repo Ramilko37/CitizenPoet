@@ -77,17 +77,18 @@
 }
 
 .side-block {
-    display: none;
-    width: 312px;
+    display: block;
+    width: 0;
     height: 900px;
     position: absolute;
     left: 0;
     top: 0;
     background-color: #262A4F;
+    transition: 0.5s;
 }
 
 .side-block_visible {
-    display: block;
+    width: 312px;
 }
 
 .form-container {
@@ -99,6 +100,7 @@
     left: 128px;
     background-color: #F8F8F5;
     z-index: 3;
+    transition: 0.5s;
 }
 
 .form-container_visible {
