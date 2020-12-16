@@ -60,9 +60,10 @@
           </div>
         </form>
       </section>
-      <!-- <section class="form-container form-container-ministry form-container_visible">
+      <section class="form-container form-container-ministry">
         <form name="form-ministry" action="POST" action='#' class="form form-ministry">
-          <h2 class="form__title">Расскажите о себе</h2>
+          <h2 class="form__title form__title_type_ministry">Выберите
+            министерства</h2>
           <div class="form-flex">
             <div class="form-flex__item">
               <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
@@ -81,6 +82,38 @@
               <span class="form-flex__caption">Правды</span>
             </div>
           </div>
+          <div class="form-button-container">
+            <button id="form-ministry-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
+            <button id="form-ministry-forvard-button" type="button"
+              class="form-button form-button_type_forvard ">Далее</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="form-container form-container-theme">
+        <form name="form-theme" action="POST" action='#' class="form form-theme">
+          <h2 class="form__title">О чем хотите
+            сообщить?</h2>
+            <div class="form__content">
+              <label for="" class="form__label">Опишите проблему
+                <textarea class="form__textarea" name="" id="" cols="30" rows="10"></textarea>
+              </label>
+              <p class="form__paragraph">При нажатии на кнопку “Далее” мы получим текст вашего обращения
+                и найдем наиболее подходящий стих под данный запрос.</p>
+              <!-- геометрию в модификаторы, типографику в селектор form-paragraph -->
+            </div>
+
+          <div class="form-button-container">
+            <button id="form-theme-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
+            <button id="form-theme-forvard-button" type="button"
+              class="form-button form-button_type_forvard ">Далее</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="form-container form-container-confirm">
+        <form name="form-confirm" action="POST" action='#' class="form form-confirm">
+          <h2 class="form__title">Расскажите о себе</h2>
           <div class="form-grid">
             <label class="form__label form__label_type_first-name" for="">Имя
               <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
@@ -103,12 +136,12 @@
             связанные с отправкой вашего заявления в государственные инстанции.
           </p>
           <div class="form-button-container">
-            <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
-            <button id="form-info-forvard-button" type="button"
+            <button id="form-confirm-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
+            <button id="form-confirm-forvard-button" type="button"
               class="form-button form-button_type_forvard ">Далее</button>
           </div>
         </form>
-      </section> -->
+      </section>
     </main>
 
   </page>

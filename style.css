@@ -35,6 +35,7 @@
     font-family: "PlayfairDisplaySC", "Georgia", serif;
     font-size: 58px;
     line-height: 77px;
+    color: #262A4F;
 }
 
 .content__paragraph {
@@ -108,7 +109,7 @@
 }
 
 .form__title {
-    margin-left: 56px;
+    margin: 56px 0 40px 56px;
     font-weight: bold;
     font-size: 44px;
     line-height: 48px;
@@ -202,23 +203,67 @@ input::-moz-placeholder { color: #D0D0CEed; }
 .form-flex {
   display: flex;
   flex-wrap: wrap;
-  width: 464px;
-  /* margin: 0 auto; */
+  width: 344px;
+  margin: 0 auto 97px;
 }
 
 .form-flex__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 104px;
+  margin-right: 104px;
+  margin-bottom: 48px;
+  margin-top: 16px;
 }
 
-.form-flex__item:nth-of-type(2n) {
+.form-flex__item:nth-of-type(even) {
   margin-right: 0;
+}
+
+.form-flex__item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.form-flex__item:nth-last-of-type(2) {
+  margin-bottom: 0;
 }
 
 .form-flex__image {
   width: 120px;
   border-radius: 50%;
-  border: 1px solid #C4C4C4
+  border: 1px solid #C4C4C4;
+  margin-bottom: 8px;
+}
+
+.form-flex__caption {
+  font-family: "RobotoSlab", "Georgia", serif;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.form__content {
+  width: 472px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 168px;
+  padding: 0;
+  margin: 16px 0 32px 0;
+  outline: none;
+  resize: none;
+  border: 0;
+  border-bottom: 1px solid #C4C4C4;
+
+}
+.form__paragraph {
+  font-family: "Roboto", "Georgia", serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5C5B5B;
+  margin: 0 0 186px 0;
 }
