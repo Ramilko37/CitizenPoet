@@ -113,24 +113,34 @@
 
       <section class="form-container form-container-confirm">
         <form name="form-confirm" action="POST" action='#' class="form form-confirm">
-          <h2 class="form__title">Расскажите о себе</h2>
-          <div class="form-grid">
-            <label class="form__label form__label_type_first-name" for="">Имя
-              <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
+          <h2 class="form__title">Подтвердите свое
+            намерение</h2>
+          <div class="form-grid form-grid_style_confirm">
+            <label class="form__label form__label_type_first-name form__label_style_confirm" for="">Имя
+              <input type="text" class="form__input form__input_type_first-name form__input_style_confirm" placeholder="Введите свое имя">
             </label>
-            <label class="form__label form__label_type_last-name" for="">Фамилия
-              <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию">
+            <label class="form__label form__label_type_last-name form__label_style_confirm" for="">Фамилия
+              <input type="text" class="form__input form__input_type_last-name form__input_style_confirm" placeholder="Введите свою фамилию">
             </label>
-            <label class="form__label form__label_type_phone" for="">Телефон
-              <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -">
+            <label class="form__label form__label_type_phone form__label_style_confirm" for="">Телефон
+              <input type="tel" class="form__input form__input_type_phone form__input_style_confirm" placeholder="+ 7  - - -  - -  - -">
             </label>
-            <label class="form__label form__label_type_email" for="">Электронная почта
-              <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email">
+            <label class="form__label form__label_type_email form__label_style_confirm" for="">Электронная почта
+              <input type="email" class="form__input form__input_type_email form__input_style_confirm" placeholder="Введите свой email">
             </label>
-            <label class="form__label form__label_type_address" for="">Адрес
-              <input type="text" class="form__input form__input_type_address" placeholder="Введите свой адрес прописки">
+            <label class="form__label form__label_type_address form__label_style_confirm" for="">Адрес
+              <input type="text" class="form__input form__input_type_address form__input_style_confirm" placeholder="Введите свой адрес прописки">
             </label>
           </div>
+
+          <h2 class="form-confirm__subtitle">Выбранные министерства</h2>
+          <div class="select-ministry">
+            <div class="select-ministry__item">Правды</div>
+            <div class="select-ministry__item">Любви</div>
+            <div class="select-ministry__item">Достатка</div>
+            <div class="select-ministry__item">Мира</div>
+          </div>
+
           <p class="form__terms-of-use">
             Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
             связанные с отправкой вашего заявления в государственные инстанции.

@@ -267,3 +267,44 @@ input::-moz-placeholder { color: #D0D0CEed; }
   color: #5C5B5B;
   margin: 0 0 186px 0;
 }
+
+
+.form-grid_style_confirm {
+  gap: 24px 30px;
+  margin-bottom: 24px;
+}
+
+.form__label_style_confirm {
+  font-size: 12px;
+  line-height: 12px;
+
+}
+
+.form__input_style_confirm {
+  background-color: #E8EAEE;
+  border: 0;
+  margin-top: 4px;
+  font-size: 12px;
+  height: 24px;
+}
+
+.select-ministry {
+  display: flex;
+  margin: 0 0 24px 56px;
+}
+
+.form-confirm__subtitle {
+  margin-left: 56px;
+  margin-bottom: 8px;
+  margin: 0 0 8px 56px;
+
+}
+
+.select-ministry__item {
+  margin-right: 16px;
+  border: 1px solid #262A4F;
+  border-radius: 2px;
+  background-color: #E8EAEE;
+  padding: 4px 8px;
+
+}
