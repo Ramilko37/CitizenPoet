@@ -199,7 +199,7 @@ input::-moz-placeholder { color: #D0D0CEed; }
 
 
 .form-send {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   width: 584px;
@@ -332,10 +332,20 @@ input::-moz-placeholder { color: #D0D0CEed; }
   margin: 0 0 24px 56px;
 }
 
+.form__textarea_style_confirm {
+  height: 128px;
+  margin-bottom: 28px;
+  margin-top: 4px;
+}
+
 .form-confirm__subtitle {
   margin-left: 56px;
   margin-bottom: 8px;
   margin: 0 0 8px 56px;
+  font-family: "RobotoSlab", "Georgia", serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
 
 }
 
@@ -346,4 +356,8 @@ input::-moz-placeholder { color: #D0D0CEed; }
   background-color: #E8EAEE;
   padding: 4px 8px;
 
+}
+
+.form__paragraph_style_confirm {
+  margin-bottom: 26px;
 }
