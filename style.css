@@ -328,10 +328,12 @@ input::-moz-placeholder { color: #D0D0CEed; }
   margin-bottom: 24px;
 }
 
+
 .form__label_style_confirm {
   font-size: 12px;
   line-height: 12px;
-
+  width: 221px;
+  position: relative;
 }
 
 .form__input_style_confirm {
@@ -340,6 +342,16 @@ input::-moz-placeholder { color: #D0D0CEed; }
   margin-top: 4px;
   font-size: 12px;
   height: 24px;
+}
+
+.form__edit-button {
+  position: absolute;
+  top: 18px;
+  right: 5px;
+}
+
+.form__edit-button:hover {
+  cursor: pointer;
 }
 
 .select-ministry {
