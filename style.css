@@ -12,11 +12,32 @@
     background-color: #F4ECD6;
 }
 
-.root {
-    max-width: 1440px;
-    min-width: 320px;
-    max-height: 900px;
+.page {
+  margin: 0 auto;
+  font-family: "RobotoSlab", "Georgia", serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  background: #000000;;
+  }
 
+
+  @media screen and (max-width: 640px) {
+    .page {
+     max-width: 320px;
+    }
+}
+
+
+.page__container {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .hero {

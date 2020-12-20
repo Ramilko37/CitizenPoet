@@ -9,91 +9,95 @@
 </head>
 
 <body class="body">
-  <page class="root">
-    <main class="main">
-      <section class="hero">
-        <div class="content">
-          <h1 class="content__title">
-            Гражданин поэт
-          </h1>
-          <p class="content__paragraph">
-            С 2023 года правительством Российской Федерации введен в силу закон,
-            устанавливающий формат подачи заявлений и гражданских актов в виде стихов поэтов-классиков.
-          </p>
-          <p class="content__paragraph">
-            Наш сервис – это самое крупное хранилище стихов
-            в России. Заполните форму, и мы отправим ваше заявление по всем правилам.
-          </p>
-          <button type="button" class="content__button">Подать заявление</button>
-        </div>
-        <img class="main-image" src="./images/img-poet-transp.png" alt="">
-      </section>
-      <aside class="side-block"></aside>
-      <section class="form-container form-container-info ">
-        <form name="form-info" action="POST" action='#' class="form form-info">
-          <h2 class="form__title">Расскажите о себе</h2>
-          <div class="form-grid">
-            <label class="form__label form__label_type_first-name" for="">Имя
-              <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
-            </label>
-            <label class="form__label form__label_type_last-name" for="">Фамилия
-              <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию">
-            </label>
-            <label class="form__label form__label_type_phone" for="">Телефон
-              <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -">
-            </label>
-            <label class="form__label form__label_type_email" for="">Электронная почта
-              <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email">
-            </label>
-            <label class="form__label form__label_type_address" for="">Адрес
-              <input type="text" class="form__input form__input_type_address" placeholder="Введите свой адрес прописки">
-            </label>
-          </div>
-          <p class="form__terms-of-use">
-            Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
-            связанные с отправкой вашего заявления в государственные инстанции.
-          </p>
-          <div class="form-button-container">
-            <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
-            <button id="form-info-forward-button" type="button"
-              class="form-button form-button_type_forward ">Далее</button>
-          </div>
-        </form>
-      </section>
-      <section class="form-container form-container-ministry">
-        <form name="form-ministry" action="POST" action='#' class="form form-ministry">
-          <h2 class="form__title form__title_type_ministry">Выберите
-            министерства</h2>
-          <div class="form-flex">
-            <div class="form-flex__item">
-              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
-              <span class="form-flex__caption">Правды</span>
-            </div>
-            <div class="form-flex__item">
-              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
-              <span class="form-flex__caption">Правды</span>
-            </div>
-            <div class="form-flex__item">
-              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
-              <span class="form-flex__caption">Правды</span>
-            </div>
-            <div class="form-flex__item">
-              <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
-              <span class="form-flex__caption">Правды</span>
-            </div>
-          </div>
-          <div class="form-button-container">
-            <button id="form-ministry-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
-            <button id="form-ministry-forward-button" type="button"
-              class="form-button form-button_type_forward ">Далее</button>
-          </div>
-        </form>
-      </section>
+  <page class="page">
+    <div class="page__container">
 
-      <section class="form-container form-container-theme">
-        <form name="form-theme" action="POST" action='#' class="form form-theme">
-          <h2 class="form__title">О чем хотите
-            сообщить?</h2>
+      <main class="main">
+        <section class="hero">
+          <div class="content">
+            <h1 class="content__title">
+              Гражданин поэт
+            </h1>
+            <p class="content__paragraph">
+              С 2023 года правительством Российской Федерации введен в силу закон,
+              устанавливающий формат подачи заявлений и гражданских актов в виде стихов поэтов-классиков.
+            </p>
+            <p class="content__paragraph">
+              Наш сервис – это самое крупное хранилище стихов
+              в России. Заполните форму, и мы отправим ваше заявление по всем правилам.
+            </p>
+            <button type="button" class="content__button">Подать заявление</button>
+          </div>
+          <img class="main-image" src="./images/img-poet-transp.png" alt="">
+        </section>
+        <aside class="side-block"></aside>
+        <section class="form-container form-container-info ">
+          <form name="form-info" action="POST" action='#' class="form form-info">
+            <h2 class="form__title">Расскажите о себе</h2>
+            <div class="form-grid">
+              <label class="form__label form__label_type_first-name" for="">Имя
+                <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя">
+              </label>
+              <label class="form__label form__label_type_last-name" for="">Фамилия
+                <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию">
+              </label>
+              <label class="form__label form__label_type_phone" for="">Телефон
+                <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -">
+              </label>
+              <label class="form__label form__label_type_email" for="">Электронная почта
+                <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email">
+              </label>
+              <label class="form__label form__label_type_address" for="">Адрес
+                <input type="text" class="form__input form__input_type_address"
+                  placeholder="Введите свой адрес прописки">
+              </label>
+            </div>
+            <p class="form__terms-of-use">
+              Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
+              связанные с отправкой вашего заявления в государственные инстанции.
+            </p>
+            <div class="form-button-container">
+              <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
+              <button id="form-info-forward-button" type="button"
+                class="form-button form-button_type_forward ">Далее</button>
+            </div>
+          </form>
+        </section>
+        <section class="form-container form-container-ministry">
+          <form name="form-ministry" action="POST" action='#' class="form form-ministry">
+            <h2 class="form__title form__title_type_ministry">Выберите
+              министерства</h2>
+            <div class="form-flex">
+              <div class="form-flex__item">
+                <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+                <span class="form-flex__caption">Правды</span>
+              </div>
+              <div class="form-flex__item">
+                <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+                <span class="form-flex__caption">Правды</span>
+              </div>
+              <div class="form-flex__item">
+                <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+                <span class="form-flex__caption">Правды</span>
+              </div>
+              <div class="form-flex__item">
+                <img src="./images/star-clip-art-59.png" alt="" class="form-flex__image">
+                <span class="form-flex__caption">Правды</span>
+              </div>
+            </div>
+            <div class="form-button-container">
+              <button id="form-ministry-back-button" type="button"
+                class="form-button form-button_type_back ">Назад</button>
+              <button id="form-ministry-forward-button" type="button"
+                class="form-button form-button_type_forward ">Далее</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="form-container form-container-theme">
+          <form name="form-theme" action="POST" action='#' class="form form-theme">
+            <h2 class="form__title">О чем хотите
+              сообщить?</h2>
             <div class="form__content">
               <label for="" class="form__label">Опишите проблему
                 <textarea class="form__textarea" name="" id="" cols="30" rows="10"></textarea>
@@ -103,76 +107,85 @@
               <!-- геометрию в модификаторы, типографику в селектор form-paragraph -->
             </div>
 
-          <div class="form-button-container">
-            <button id="form-theme-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
-            <button id="form-theme-forward-button" type="button"
-              class="form-button form-button_type_forward ">Далее</button>
-          </div>
-        </form>
-      </section>
+            <div class="form-button-container">
+              <button id="form-theme-back-button" type="button"
+                class="form-button form-button_type_back ">Назад</button>
+              <button id="form-theme-forward-button" type="button"
+                class="form-button form-button_type_forward ">Далее</button>
+            </div>
+          </form>
+        </section>
 
-      <section class="form-container form-container-confirm">
-        <form name="form-confirm" action="POST" action='#' class="form form-confirm">
-          <h2 class="form__title">Подтвердите свое
-            намерение</h2>
-          <div class="form-grid form-grid_style_confirm">
-            <label class="form__label form__label_type_first-name form__label_style_confirm" for="">Имя
-              <input type="text" class="form__input form__input_type_first-name form__input_style_confirm" placeholder="Введите свое имя">
-              <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
-            </label>
-            <label class="form__label form__label_type_last-name form__label_style_confirm" for="">Фамилия
-              <input type="text" class="form__input form__input_type_last-name form__input_style_confirm" placeholder="Введите свою фамилию">
-              <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
-            </label>
-            <label class="form__label form__label_type_phone form__label_style_confirm" for="">Телефон
-              <input type="tel" class="form__input form__input_type_phone form__input_style_confirm" placeholder="+ 7  - - -  - -  - -">
-              <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
-            </label>
-            <label class="form__label form__label_type_email form__label_style_confirm" for="">Электронная почта
-              <input type="email" class="form__input form__input_type_email form__input_style_confirm" placeholder="Введите свой email">
-              <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
-            </label>
-            <label class="form__label form__label_type_address form__label_style_confirm" for="">Адрес
-              <input type="text" class="form__input form__input_type_address form__input_style_confirm" placeholder="Введите свой адрес прописки">
-              <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
-            </label>
-          </div>
+        <section class="form-container form-container-confirm">
+          <form name="form-confirm" action="POST" action='#' class="form form-confirm">
+            <h2 class="form__title">Подтвердите свое
+              намерение</h2>
+            <div class="form-grid form-grid_style_confirm">
+              <label class="form__label form__label_type_first-name form__label_style_confirm" for="">Имя
+                <input type="text" class="form__input form__input_type_first-name form__input_style_confirm"
+                  placeholder="Введите свое имя">
+                <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
+              </label>
+              <label class="form__label form__label_type_last-name form__label_style_confirm" for="">Фамилия
+                <input type="text" class="form__input form__input_type_last-name form__input_style_confirm"
+                  placeholder="Введите свою фамилию">
+                <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
+              </label>
+              <label class="form__label form__label_type_phone form__label_style_confirm" for="">Телефон
+                <input type="tel" class="form__input form__input_type_phone form__input_style_confirm"
+                  placeholder="+ 7  - - -  - -  - -">
+                <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
+              </label>
+              <label class="form__label form__label_type_email form__label_style_confirm" for="">Электронная почта
+                <input type="email" class="form__input form__input_type_email form__input_style_confirm"
+                  placeholder="Введите свой email">
+                <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
+              </label>
+              <label class="form__label form__label_type_address form__label_style_confirm" for="">Адрес
+                <input type="text" class="form__input form__input_type_address form__input_style_confirm"
+                  placeholder="Введите свой адрес прописки">
+                <!-- <img src="./images/icons.svg" alt="" class="form__edit-button"> -->
+              </label>
+            </div>
 
-          <h2 class="form-confirm__subtitle">Выбранные министерства</h2>
-          <div class="select-ministry">
-            <div class="select-ministry__item">Правды</div>
-            <div class="select-ministry__item">Любви</div>
-            <div class="select-ministry__item">Достатка</div>
-            <div class="select-ministry__item">Мира</div>
-          </div>
+            <h2 class="form-confirm__subtitle">Выбранные министерства</h2>
+            <div class="select-ministry">
+              <div class="select-ministry__item">Правды</div>
+              <div class="select-ministry__item">Любви</div>
+              <div class="select-ministry__item">Достатка</div>
+              <div class="select-ministry__item">Мира</div>
+            </div>
 
-          <div class="form__content">
-            <label for="" class="form__label form__label form__label_style_confirm">Текст заявления
-              <textarea class="form__textarea form__textarea_style_confirm" name="" id="" cols="30" rows="10"></textarea>
-            </label>
-            <p class="form__paragraph form__paragraph_style_confirm">Я проверил все данные формы и согласен с ее отправкой
-              и последующей обработкой любыми третьими лицами.</p>
-            <!-- геометрию в модификаторы, типографику в селектор form-paragraph -->
-          </div>
-          <div class="form-button-container">
-            <button id="form-confirm-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
-            <button id="form-confirm-submit-button" type="submit"
-              class="form-button form-button_type_forward ">Отправить</button>
-          </div>
-        </form>
-        <section class="claim form-container form-container_claim form-container_visible">
-          <div class="claim__header">
-            <p class="claim__paragraph claim__ministry">
-              В Министерство Правды Российской Федерации.
-            </p>
-            <p class="claim__paragraph claim__sender">
-              От: Лукьянов Евгений.
-              Проживает по адресу: Москва, Тверская улица, дом 13.
-            </p>
-            <p class="claim__paragraph claim__phone">
-              Телефон: +7 (954) 648-53-78
-            </p>
-          </div>
+            <div class="form__content">
+              <label for="" class="form__label form__label form__label_style_confirm">Текст заявления
+                <textarea class="form__textarea form__textarea_style_confirm" name="" id="" cols="30"
+                  rows="10"></textarea>
+              </label>
+              <p class="form__paragraph form__paragraph_style_confirm">Я проверил все данные формы и согласен с ее
+                отправкой
+                и последующей обработкой любыми третьими лицами.</p>
+              <!-- геометрию в модификаторы, типографику в селектор form-paragraph -->
+            </div>
+            <div class="form-button-container">
+              <button id="form-confirm-back-button" type="button"
+                class="form-button form-button_type_back ">Назад</button>
+              <button id="form-confirm-submit-button" type="submit"
+                class="form-button form-button_type_forward ">Отправить</button>
+            </div>
+          </form>
+          <section class="claim form-container form-container_claim form-container_visible">
+            <div class="claim__header">
+              <p class="claim__paragraph claim__ministry">
+                В Министерство Правды Российской Федерации.
+              </p>
+              <p class="claim__paragraph claim__sender">
+                От: Лукьянов Евгений.
+                Проживает по адресу: Москва, Тверская улица, дом 13.
+              </p>
+              <p class="claim__paragraph claim__phone">
+                Телефон: +7 (954) 648-53-78
+              </p>
+            </div>
             <h3 class="claim__title">Заявление</h3>
             <p class="claim__text">
               Спасибо — кто дарит. <br>
@@ -194,26 +207,34 @@
               как матросский нож,<br>
               Суровая жажда славы.<br>
             </p>
-          <div class="claim__footer">
-            <span class="claim__date footer-span">Дата: 13.12.2025</span>
-            <span class="claim__sign footer-span">В. Луговской, 1926</span>
-          </div>
+            <div class="claim__footer">
+              <span class="claim__date footer-span">Дата: 13.12.2025</span>
+              <span class="claim__sign footer-span">В. Луговской, 1926</span>
+            </div>
+          </section>
         </section>
-      </section>
 
 
-      <div class="form-send">
-        <h3 class="content__title-send">
-          Ваше заявление отправлено
-        </h3>
-        <p class="content__paragraph-send">
-          Мы обязаны следовать протоколам проверки данных, поэтому заявления обрабатываются от 4 до 6 недель.
-          После этого вы получите уведомление о вызове на беседу по вашему вопросу в отделение милиции по месту жительства.
-        </p>
-        <button id="form-send-close-button" type="button" class="content__button content__button_send">Закрыть</button>
-      </div>
+        <div class="form-send">
+          <h3 class="content__title-send">
+            Ваше заявление отправлено
+          </h3>
+          <p class="content__paragraph-send">
+            Мы обязаны следовать протоколам проверки данных, поэтому заявления обрабатываются от 4 до 6 недель.
+            После этого вы получите уведомление о вызове на беседу по вашему вопросу в отделение милиции по месту
+            жительства.
+          </p>
+          <button id="form-send-close-button" type="button"
+            class="content__button content__button_send">Закрыть</button>
+        </div>
 
-    </main>
+      </main>
+
+    </div>
+
+
+
+
 
   </page>
   <script src="./scripts/index.js"></script>
