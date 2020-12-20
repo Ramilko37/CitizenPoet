@@ -9,14 +9,14 @@ const sideBlock = document.querySelector('.side-block');
 const applyButton = document.querySelector(".content__button");
 
 const formInfoButtonBack = infoSection.querySelector("#form-info-back-button");
-const formInfoButtonForvard = infoSection.querySelector("#form-info-forvard-button");
+const formInfoButtonForward = infoSection.querySelector("#form-info-forward-button");
 
 
 const formMinistryButtonBack = ministrySection.querySelector("#form-ministry-back-button");
-const formMinistryButtonForvard = ministrySection.querySelector("#form-ministry-forvard-button");
+const formMinistryButtonForward = ministrySection.querySelector("#form-ministry-forward-button");
 
 const formThemeButtonBack = themeSection.querySelector("#form-theme-back-button");
-const formThemeButtonForvard = themeSection.querySelector("#form-theme-forvard-button");
+const formThemeButtonForward = themeSection.querySelector("#form-theme-forward-button");
 
 const formConfirmButtonBack = confirmSection.querySelector("#form-confirm-back-button");
 const formConfirmButtonSubmit = confirmSection.querySelector("#form-confirm-submit-button");
@@ -33,7 +33,7 @@ formInfoButtonBack.addEventListener('click', () => {
     infoSection.classList.remove('form-container_visible');
 })
 
-formInfoButtonForvard.addEventListener('click', () => {
+formInfoButtonForward.addEventListener('click', () => {
   infoSection.classList.remove('form-container_visible');
   ministrySection.classList.add('form-container_visible');
 })
@@ -43,7 +43,7 @@ formMinistryButtonBack.addEventListener('click', () => {
   infoSection.classList.add('form-container_visible');
 })
 
-formMinistryButtonForvard.addEventListener('click', () => {
+formMinistryButtonForward.addEventListener('click', () => {
   ministrySection.classList.remove('form-container_visible');
   themeSection.classList.add('form-container_visible');
 })
@@ -53,7 +53,7 @@ formThemeButtonBack.addEventListener('click', () => {
   ministrySection.classList.add('form-container_visible');
 })
 
-formThemeButtonForvard.addEventListener('click', () => {
+formThemeButtonForward.addEventListener('click', () => {
   themeSection.classList.remove('form-container_visible');
   confirmSection.classList.add('form-container_visible');
 })

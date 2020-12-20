@@ -23,6 +23,9 @@ background-color: #F4ECD6;
   outline: 1px red solid;
   }
 
+  .main {
+    position: relative;
+  }
 
   @media screen and (max-width: 640px) {
   .page {
@@ -260,47 +263,62 @@ input::-moz-placeholder { color: #D0D0CEed; }
     color: #fff;
 }
 
+.form__title_type_ministry{
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
 
 .form-flex {
   display: flex;
-  flex-wrap: wrap;
-  width: 344px;
-  margin: 0 auto 97px;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  width: 472px;
+  margin: 0 auto 40px;
+  outline: 1px solid red;
 }
 
 .form-flex__item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  margin-right: 104px;
-  margin-bottom: 48px;
-  margin-top: 16px;
+  margin-bottom: 8px;
+  outline: 1px solid red;
+  padding: 16px;
 }
 
-.form-flex__item:nth-of-type(even) {
+/* .form-flex__item:nth-of-type(even) {
   margin-right: 0;
-}
+} */
 
-.form-flex__item:nth-last-of-type(1) {
+.form-flex__item:last-of-type {
   margin-bottom: 0;
 }
-
+/*
 .form-flex__item:nth-last-of-type(2) {
   margin-bottom: 0;
-}
+} */
 
 .form-flex__image {
-  width: 120px;
-  border-radius: 50%;
-  border: 1px solid #C4C4C4;
-  margin-bottom: 8px;
+  width: 72px;
+  height: 72px;
+  margin-right: 12px;
+  background-image: url(./images/Rectangle\ 1163.png);
 }
 
-.form-flex__caption {
+.form-flex__text-container {
+  width: 356px;
+}
+
+.form-flex__title {
+  margin: 0 0 4px 0;
+}
+
+.form-flex__text {
   font-family: "RobotoSlab", "Georgia", serif;
-  font-size: 18px;
-  line-height: 20px;
-  color: #000000;
+  font-size: 12px;
+  line-height: 120%;
+  color: #262A4F;
+  margin: 0;
 }
 
 .form__content {
