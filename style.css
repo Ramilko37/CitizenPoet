@@ -390,10 +390,6 @@ input::-moz-placeholder { color: #D0D0CEed; }
   flex-direction: column; */
 }
 
-.claim__header {
-  width: 290px;
-  margin: 40px 28px 40px auto;
-}
 
 .claim__paragraph {
   font-family: "RobotoSlab", "Georgia", serif;
