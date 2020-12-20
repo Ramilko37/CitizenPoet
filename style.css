@@ -3,17 +3,12 @@
 @import url("./vendor/fonts/Roboto/Roboto.css");
 @import url("./vendor/fonts/Roboto_Slab/roboto_slab.css");
 
-* {
-    box-sizing: border-box;
-}
 
 .body {
-
-    background-color: #F4ECD6;
+background-color: #F4ECD6;
 }
 
 .page {
-  margin: 0 auto;
   font-family: "RobotoSlab", "Georgia", serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -21,34 +16,33 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  background: #000000;;
+  max-width: 1440px;
+  min-width: 320px;
+  background-color: #F4ECD6;
+  margin: 0 auto;
+  outline: 1px red solid;
   }
 
 
   @media screen and (max-width: 640px) {
-    .page {
-     max-width: 320px;
+  .page {
+  max-width: 320px;
     }
 }
 
-
-.page__container {
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 .hero {
+
     display: flex;
-    flex-direction: column;
+    max-height: 900px;
+    background: url(./images/img-poet-transp.png) no-repeat right bottom;
+
 }
 
 .content {
     width: 551px;
     margin: 112px 0 0 128px;
     z-index: 1;
+    margin-bottom: 155px;
 }
 
 .content__title {
@@ -120,8 +114,6 @@ color: #5C5B5B;
     background: #262A4F;
     border-radius: 4px;
     color: #FFF;
-    border-radius: 4px;
-    z-index: 1;
     font-size: 24px;
     line-height: 32px;
     margin: 0;
@@ -143,10 +135,10 @@ color: #5C5B5B;
 
 .main-image {
     width: 1078px;
-    position: absolute;
+    /* position: absolute;
     right: 0;
     top: 0;
-    z-index: 0;
+    z-index: 0; */
 }
 
 .side-block {
@@ -191,7 +183,6 @@ color: #5C5B5B;
 }
 
 .form-grid {
-    /* outline: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(2, 224px);
     gap: 64px 24px ;
@@ -407,8 +398,6 @@ input::-moz-placeholder { color: #D0D0CEed; }
   position: absolute;
   top: 0;
   left: 600px;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 
@@ -451,7 +440,6 @@ input::-moz-placeholder { color: #D0D0CEed; }
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  /* justify-self: flex-end; */
 }
 
 .footer-span {
@@ -466,4 +454,3 @@ color: #212121;
 .hidden {
   display: none;
 }
-
