@@ -1,0 +1,17 @@
+.content__button {
+    width: 319px;
+    height: 80px;
+    background: #262A4F;
+    border-radius: 4px;
+    color: #FFF;
+    border-radius: 4px;
+    z-index: 1;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-family: "RobotoSlab", "Georgia", serif;
+}
