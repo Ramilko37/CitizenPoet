@@ -1,3 +1,7 @@
+import { settings } from './constants.js';
+import Api from './Api.js';
+import FormValidator from './FormValidator.js';
+
 const heroSection = document.querySelector('.content')
 const infoSection = document.querySelector('.form-container-info');
 const ministrySection = document.querySelector('.form-container-ministry');
@@ -75,3 +79,20 @@ formSendButtonClose.addEventListener('click', () => {
   heroSection.classList.remove('hidden');
   sendSection.classList.remove('form-container_visible');
 })
+
+
+const api = new Api({
+  baseUrl: 'http://www.buymebuyme.xyz',
+  headers: {
+      'Content-Type': 'application/json'
+  }
+});
+
+const poems = api.getPoems();
+
+console.log('poems', poems)
+
+console.log(poems[0])
+
+const infoSectionValidation = new FormValidator(infoSection, settings);
+infoSectionValidation.enableValidation();
