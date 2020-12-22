@@ -28,6 +28,16 @@ background-color: #F4ECD6;
   }
 
   @media screen and (max-width: 640px) {
+    .main {
+      padding: 24px 16px 36px;
+      }
+  }
+
+  
+
+
+
+  @media screen and (max-width: 640px) {
   .page {
   max-width: 320px;
     }
@@ -41,12 +51,26 @@ background-color: #F4ECD6;
 
 }
 
+@media screen and (max-width: 640px) {
+.hero {
+  max-width: 288px;
+  background: none;
+  margin: 0 auto;
+ }
+}
+
 .content {
-    width: 551px;
+    width: 515px;
     margin: 112px 0 0 128px;
     z-index: 1;
     margin-bottom: 155px;
 }
+@media screen and (max-width: 640px) {
+  .content {
+    width: 288px;
+    margin: 0 auto;
+   }
+  }
 
 .content__title {
     margin: 0 0 72px 0;
@@ -56,7 +80,15 @@ background-color: #F4ECD6;
     line-height: 77px;
     color: #262A4F;
 }
-
+@media screen and (max-width: 640px) {
+  .content__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 53px;
+    margin-bottom: 38px;
+   }
+  }
 
 .content__paragraph {
     font-size: 20px;
@@ -69,6 +101,21 @@ background-color: #F4ECD6;
 .content__paragraph:last-of-type {
     margin-bottom: 200px;
 }
+
+@media screen and (max-width: 640px) {
+  .content__paragraph {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+   }
+
+   .content__paragraph:last-of-type {
+    margin-bottom: 52px;
+}
+
+  }
+
 
 .form-send {
   display: none;
@@ -135,6 +182,13 @@ color: #5C5B5B;
   font-size: 16px;
   line-height: 21px;
 }
+
+@media screen and (max-width: 640px) {
+  .content__button {
+    width: 288px;
+    height: 48px;
+   }
+  }
 
 .main-image {
     width: 1078px;

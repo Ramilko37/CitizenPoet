@@ -111,7 +111,6 @@ function updatePoem() {
   fetch('http://www.buymebuyme.xyz')
   .then(res => res.json()) 
   .then((data) => poemParagraph.textContent = (data[0].fields.text))
-  .then((data) => console.log(data[0].fields.text))
   
 }
 
