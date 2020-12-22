@@ -27,10 +27,10 @@ const formConfirmButtonSubmit = confirmSection.querySelector("#form-confirm-subm
 
 const formSendButtonClose = sendSection.querySelector('#form-send-close-button');
 
-applyButton.addEventListener('click', () => {
-    sideBlock.classList.add('side-block_visible');
-    infoSection.classList.add('form-container_visible');
-})
+// applyButton.addEventListener('click', () => {
+//     sideBlock.classList.add('side-block_visible');
+//     infoSection.classList.add('form-container_visible');
+// })
 
 formInfoButtonBack.addEventListener('click', () => {
     sideBlock.classList.remove('side-block_visible');
@@ -88,11 +88,36 @@ const api = new Api({
   }
 });
 
+console.log(api)
+
 const poems = api.getPoems();
+
+
+
+
 
 console.log('poems', poems)
 
-console.log(poems[0])
+const poem = poems[0];
+
+console.log(poem)
+
+// api.getPoems().then(data)=>{console.log(data)}
+
+const poemParagraph = document.querySelector('.content__paragraph');
+console.log(poemParagraph)
+
+function updatePoem() {
+  fetch('http://www.buymebuyme.xyz')
+  .then(res => res.json()) 
+  .then((data) => poemParagraph.textContent = (data[0].fields.text))
+  .then((data) => console.log(data[0].fields.text))
+  
+}
+
+  applyButton.addEventListener('click', updatePoem)
+
+
 
 const infoSectionValidation = new FormValidator(infoSection, settings);
 infoSectionValidation.enableValidation();

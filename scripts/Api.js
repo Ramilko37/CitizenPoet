@@ -13,11 +13,13 @@
         method: 'GET'
     })
     .then((res) => {
-        console.log(res)
         return res.json();
     })
-    .catch((err) => {
-        return console.log(err);
+    .then((data) => {
+        console.log(data); 
+    })
+    .catch((res) => {
+        return Promise.reject(`Alert: ${res.status} - ${res.statusText}`);
     })
 }
 }  
