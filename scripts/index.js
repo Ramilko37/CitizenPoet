@@ -27,10 +27,10 @@ const formConfirmButtonSubmit = confirmSection.querySelector("#form-confirm-subm
 
 const formSendButtonClose = sendSection.querySelector('#form-send-close-button');
 
-// applyButton.addEventListener('click', () => {
-//     sideBlock.classList.add('side-block_visible');
-//     infoSection.classList.add('form-container_visible');
-// })
+applyButton.addEventListener('click', () => {
+    sideBlock.classList.add('side-block_visible');
+    infoSection.classList.add('form-container_visible');
+})
 
 formInfoButtonBack.addEventListener('click', () => {
     sideBlock.classList.remove('side-block_visible');
@@ -80,41 +80,71 @@ formSendButtonClose.addEventListener('click', () => {
   sendSection.classList.remove('form-container_visible');
 })
 
-
-const api = new Api({
-  baseUrl: 'http://www.buymebuyme.xyz',
-  headers: {
-      'Content-Type': 'application/json'
-  }
-});
-
-console.log(api)
-
-const poems = api.getPoems();
+// const pravda = 'правда';
 
 
+// const api = new Api({
+//   baseUrl: `http://www.buymebuyme.xyz?q=${pravda}`,
+//   headers: {
+//       'Content-Type': 'application/json'
+//   }
+// });
+
+// console.log(api)
+
+// const poems = api.getPoems();
 
 
 
-console.log('poems', poems)
 
-const poem = poems[0];
 
-console.log(poem)
+// console.log('poems', poems)
+
+// const poem = poems[0];
+
+// console.log(poem)
 
 // api.getPoems().then(data)=>{console.log(data)}
 
-const poemParagraph = document.querySelector('.content__paragraph');
-console.log(poemParagraph)
+// const poemParagraph = document.querySelector('.content__paragraph');
+// console.log(poemParagraph)
 
-function updatePoem() {
-  fetch('http://www.buymebuyme.xyz')
-  .then(res => res.json()) 
-  .then((data) => poemParagraph.textContent = (data[0].fields.text))
-  
+const pravda = 'правда';
+
+const ministry1 = {
+
 }
 
-  applyButton.addEventListener('click', updatePoem)
+function updatePoem() 
+  {fetch(`http://www.buymebuyme.xyz?q=${pravda}`)
+  .then(res => res.json()) 
+  .then((data) => {const obj1 = data;
+    let result = obj1.map(({ fields }) => fields.text);
+    console.log(result);
+    let poems = result.filter(item => item.length < 800);
+    console.log(poems)
+    // let randomPoem = result[Math.floor((Math.random() * result.length))];
+    // console.log(randomPoem)
+  })
+}
+
+// const result = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+// const result = words.filter(word => word.length > 6);
+// let result = obj1.filter(item => item.fields.text);
+
+
+
+
+// let new_array = arr.map(function callback( currentValue[, index[, array]]) {
+//   // Возвращает элемент для new_array
+// }[, thisArg])  
+
+
+
+// applyButton.addEventListener('click', updatePoem)
+
+
 
 
 
