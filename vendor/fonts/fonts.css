@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'PlayfairDisplaySC';
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("PlayfairDisplaySC-Bold.ttf?v=3.13") format("truetype");
+  }
+
+  @font-face {
+    font-family: 'PlayfairDisplaySC';
+    font-style:  normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("PlayfairDisplaySC-Black.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Roboto-Regular.ttf?v=3.13") format("truetype");
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    font-style:  italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("Roboto-ThinItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: 'RobotoSlab';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("RobotoSlab-Regular.ttf?v=3.13") format("truetype");
+  }

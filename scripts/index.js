@@ -27,10 +27,10 @@ const formConfirmButtonSubmit = confirmSection.querySelector("#form-confirm-subm
 
 const formSendButtonClose = sendSection.querySelector('#form-send-close-button');
 
-applyButton.addEventListener('click', () => {
-    sideBlock.classList.add('side-block_visible');
-    infoSection.classList.add('form-container_visible');
-})
+// applyButton.addEventListener('click', () => {
+//     sideBlock.classList.add('side-block_visible');
+//     infoSection.classList.add('form-container_visible');
+// })
 
 formInfoButtonBack.addEventListener('click', () => {
     sideBlock.classList.remove('side-block_visible');
@@ -142,7 +142,7 @@ function updatePoem()
 
 
 
-// applyButton.addEventListener('click', updatePoem)
+applyButton.addEventListener('click', updatePoem)
 
 
 
