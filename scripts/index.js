@@ -2,6 +2,36 @@ import { settings } from './constants.js';
 import Api from './Api.js';
 import FormValidator from './FormValidator.js';
 
+const ministryTruthButton = document.querySelector('#ministryTruth')
+const ministryPeaceButton = document.querySelector('#ministryPeace')
+const ministryPlentyButton = document.querySelector('#ministryPlenty')
+const ministryLoveButton = document.querySelector('#ministryLove')
+
+const ministriesList = document.querySelectorAll('.form-flex__item')
+
+function setMinistryEventListeners() {
+  ministriesList.forEach(ministry => {
+    ministry.addEventListener('click', () => {
+      ministry.classList.toggle('active-ministry')
+    });
+  });
+};
+
+setMinistryEventListeners()
+
+function getActiveMinistry() {
+
+const activeMinistry = document.querySelectorAll('.active-ministry');
+const activeMinistryNames = activeMinistry.forEach((item) => {
+  return console.log(item.querySelector('.form-flex__title').textContent);
+})
+}
+
+
+
+
+
+
 const heroSection = document.querySelector('.content')
 const infoSection = document.querySelector('.form-container-info');
 const ministrySection = document.querySelector('.form-container-ministry');
@@ -65,8 +95,9 @@ formMinistryButtonBack.addEventListener('click', () => {
 })
 
 formMinistryButtonForward.addEventListener('click', () => {
-  ministrySection.classList.remove('form-container_visible');
-  themeSection.classList.add('form-container_visible');
+  // ministrySection.classList.remove('form-container_visible');
+  // themeSection.classList.add('form-container_visible');
+  getActiveMinistry()
 })
 
 formThemeButtonBack.addEventListener('click', () => {
@@ -142,7 +173,7 @@ formSendButtonClose.addEventListener('click', () => {
 //   email: '',
 //   address: '',
 
-//  
+//
 
 
 // }
@@ -194,7 +225,7 @@ function userDataGetInfo() {
 //   const obj = {};
 
 
-  
+
 //   inputs.forEach((input) => {
 //     console.log(input);
 //       obj[input.name] = input.value;
@@ -204,7 +235,7 @@ function userDataGetInfo() {
 //   })
 //   return console.log(obj);
 
-  
+
 // }
 
 
@@ -217,16 +248,16 @@ function userDataGetInfo() {
 
 
 // arr.forEach(item => {
-//   updatePoem(item) 
+//   updatePoem(item)
 // });
 
 // function add () {
 //   container.textcontet
 // }
 
-function updatePoem(key) 
+function updatePoem(key)
   {fetch(`http://www.buymebuyme.xyz?q=${key}`)
-  .then(res => res.json()) 
+  .then(res => res.json())
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
     console.log(result);
@@ -249,7 +280,7 @@ function updatePoem(key)
 
 // let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 //   // Возвращает элемент для new_array
-// }[, thisArg])  
+// }[, thisArg])
 
 
 

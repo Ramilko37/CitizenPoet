@@ -374,7 +374,7 @@ input::-moz-placeholder {
   /* flex-wrap: wrap; */
   width: 472px;
   margin: 0 auto 40px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .form-flex__item {
@@ -382,8 +382,14 @@ input::-moz-placeholder {
   flex-direction: row;
   align-items: center;
   margin-bottom: 8px;
-  outline: 1px solid red;
+  outline: none;
   padding: 16px;
+  background-color: #fff;
+  border: 0;
+}
+
+.active-ministry {
+  background-color: #C4C4C4;
 }
 
 /* .form-flex__item:nth-of-type(even) {
