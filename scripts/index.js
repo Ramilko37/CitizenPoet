@@ -2,36 +2,6 @@ import { settings } from './constants.js';
 import Api from './Api.js';
 import FormValidator from './FormValidator.js';
 
-const ministryTruthButton = document.querySelector('#ministryTruth')
-const ministryPeaceButton = document.querySelector('#ministryPeace')
-const ministryPlentyButton = document.querySelector('#ministryPlenty')
-const ministryLoveButton = document.querySelector('#ministryLove')
-
-const ministriesList = document.querySelectorAll('.form-flex__item')
-
-function setMinistryEventListeners() {
-  ministriesList.forEach(ministry => {
-    ministry.addEventListener('click', () => {
-      ministry.classList.toggle('active-ministry')
-    });
-  });
-};
-
-setMinistryEventListeners()
-
-function getActiveMinistry() {
-
-const activeMinistry = document.querySelectorAll('.active-ministry');
-const activeMinistryNames = activeMinistry.forEach((item) => {
-  return console.log(item.querySelector('.form-flex__title').textContent);
-})
-}
-
-
-
-
-
-
 const heroSection = document.querySelector('.content')
 const infoSection = document.querySelector('.form-container-info');
 const ministrySection = document.querySelector('.form-container-ministry');
@@ -68,8 +38,23 @@ const inputAddress = infoSection.querySelector('.form__input_type_address');
 const inputClaim = themeSection.querySelector('.form__textarea');
 
 
+const ministriesList = document.querySelectorAll('.form-flex__item');
+const template = document.querySelector('.template');
 
-console.log(inputName)
+function setMinistryEventListeners() {
+  ministriesList.forEach(ministry => {
+    ministry.addEventListener('click', () => {
+      ministry.classList.toggle('active-ministry')
+    });
+  });
+};
+
+setMinistryEventListeners()
+
+
+
+
+
 
 
 applyButton.addEventListener('click', () => {
@@ -95,9 +80,20 @@ formMinistryButtonBack.addEventListener('click', () => {
 })
 
 formMinistryButtonForward.addEventListener('click', () => {
-  // ministrySection.classList.remove('form-container_visible');
-  // themeSection.classList.add('form-container_visible');
-  getActiveMinistry()
+  ministrySection.classList.remove('form-container_visible');
+  themeSection.classList.add('form-container_visible');
+  // getActiveMinistry();
+  const array = getActiveMinistry();
+  userData.ministries = array.map((array) => {
+    return array;
+  });
+
+
+  // userData.ministries[0].ministryName = array[0];
+  // userData.ministries[1].ministryName = array[1];
+  // userData.ministries[2].ministryName = array[2];
+  // userData.ministries[3].ministryName = array[3];
+  console.log(userData.ministries)
 })
 
 formThemeButtonBack.addEventListener('click', () => {
@@ -109,7 +105,15 @@ formThemeButtonForward.addEventListener('click', () => {
   themeSection.classList.remove('form-container_visible');
   confirmSection.classList.add('form-container_visible');
   claimSection.classList.add('form-container_visible');
-  userDataGetInfo();
+  userClaimGetInfo();
+})
+
+formThemeButtonForward.addEventListener('click', () => {
+  console.log(userData.ministries)
+  userData.ministries.forEach((key) => {
+   getPoem(key);
+   
+  })
 })
 
 formConfirmButtonBack.addEventListener('click', () => {
@@ -130,53 +134,11 @@ formSendButtonClose.addEventListener('click', () => {
   sendSection.classList.remove('form-container_visible');
 })
 
-// const pravda = 'правда';
-
-
-// const api = new Api({
-//   baseUrl: `http://www.buymebuyme.xyz?q=${pravda}`,
-//   headers: {
-//       'Content-Type': 'application/json'
-//   }
-// });
-
-// console.log(api)
-
-// const poems = api.getPoems();
 
 
 
 
-
-// console.log('poems', poems)
-
-// const poem = poems[0];
-
-// console.log(poem)
-
-// api.getPoems().then(data)=>{console.log(data)}
-
-// const poemParagraph = document.querySelector('.content__paragraph');
-// console.log(poemParagraph)
-
-
-
-
-
-
-
-
-// const userData = {
-//   name: '',
-//   lastName: '',
-//   phone: '',
-//   email: '',
-//   address: '',
-
-//
-
-
-// }
+// const templateHTML = ''
 
 const userData = {
   name: '',
@@ -186,22 +148,7 @@ const userData = {
   address: '',
   claim: '',
   ministries: [
-        {
-          ministry: '',
-          container: "conttrue",
-        },
-        {
-          ministry: "мир",
-          container: "conttrue",
-        },
-        {
-          ministry: "",
-          container: "",
-        },
-        {
-          ministry: "",
-          container: "",
-        },
+        
       ],
 }
 
@@ -212,57 +159,68 @@ function userDataGetInfo() {
   userData.phone = inputPhone.value;
   userData.email = inputEmail.value;
   userData.address = inputAddress.value;
+  // userData.claim = inputClaim.value;
+
+  return console.log(userData);
+}
+
+function userClaimGetInfo() {
   userData.claim = inputClaim.value;
   return console.log(userData);
 }
 
+function getActiveMinistry() {
+  const activeMinistry = Array.from(document.querySelectorAll('.active-ministry'));
+  const activeMinistryNames = activeMinistry.map((item) => {
+    return item.querySelector('.form-flex__title').textContent.slice(13);
+  })
+  
+return activeMinistryNames;
+}
 
-
-// function getInputValues() {
-//   const inputs = Array.from(infoSection.querySelectorAll('.form__input'));
-
-
-//   const obj = {};
-
-
-
-//   inputs.forEach((input) => {
-//     console.log(input);
-//       obj[input.name] = input.value;
-//       // obj[input.lastName] = input.value
-//       // obj[input.phone] = input.value
-//       // obj[input.email] = input.value
-//   })
-//   return console.log(obj);
-
-
-// }
-
-
-
-
-
-
-
-
-
+// const anyArray = getActiveMinistry();
 
 // arr.forEach(item => {
-//   updatePoem(item)
+//   updatePoem(item) 
 // });
 
 // function add () {
 //   container.textcontet
 // }
 
-function updatePoem(key)
-  {fetch(`http://www.buymebuyme.xyz?q=${key}`)
-  .then(res => res.json())
+function getPoem(key) {
+  fetch(`http://www.buymebuyme.xyz?q=${key}`)
+  .then(res => res.json()) 
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
-    console.log(result);
-    let poems = result.filter(item => item.length < 800);
-    console.log(poems)
+    
+  
+    let poem = result.filter(item => item.length < 600);
+    let randomPoem = poem[Math.floor((Math.random() * poem.length))];
+    console.log(randomPoem);
+
+   claimSection.insertAdjacentHTML ('beforeend', `<div class="claim__header">
+   <p class="claim__paragraph claim__ministry">
+     В Министерство Правды Российской Федерации.
+   </p>
+   <p class="claim__paragraph claim__sender">
+     От: Лукьянов Евгений.
+     Проживает по адресу: Москва, Тверская улица, дом 13.
+   </p>
+   <p class="claim__paragraph claim__phone">
+     Телефон: +7 (954) 648-53-78
+   </p>
+ </div>
+ <h3 class="claim__title">Заявление</h3>
+ <p class="claim__text">
+   ${randomPoem}
+ </p>
+ <div class="claim__footer">
+   <span class="claim__date footer-span">Дата: 13.12.2025</span>
+   <span class="claim__sign footer-span">В. Луговской, 1926</span>
+ </div>`)
+
+
     // let randomPoem = result[Math.floor((Math.random() * result.length))];
     // console.log(randomPoem)
     // function add (poem) { container.textcontet = poem}
@@ -280,7 +238,7 @@ function updatePoem(key)
 
 // let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 //   // Возвращает элемент для new_array
-// }[, thisArg])
+// }[, thisArg])  
 
 
 
