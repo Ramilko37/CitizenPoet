@@ -86,7 +86,7 @@ formMinistryButtonForward.addEventListener('click', () => {
   const array = getActiveMinistry();
   console.log(array);
   userData.ministries = array.map((item) => {
-    return  (' ' + item + ' ');
+    return  ' ' + item + ' ';
   });
 
 
@@ -193,8 +193,7 @@ return activeMinistryNames;
 
 
 function getPoem(key) {
-  console.log(key.length)
-  fetch(`https://buymebuyme.xyz/?q=%0A${key}%0A`)
+  fetch(`http://www.buymebuyme.xyz?q=${key}`)
   .then(res => res.json()) 
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
