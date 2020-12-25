@@ -84,8 +84,9 @@ formMinistryButtonForward.addEventListener('click', () => {
   themeSection.classList.add('form-container_visible');
   // getActiveMinistry();
   const array = getActiveMinistry();
-  userData.ministries = array.map((array) => {
-    return array;
+  console.log(array);
+  userData.ministries = array.map((item) => {
+    return  (' ' + item + ' ');
   });
 
 
@@ -188,16 +189,20 @@ return activeMinistryNames;
 //   container.textcontet
 // }
 
+
+
+
 function getPoem(key) {
-  fetch(`http://www.buymebuyme.xyz?q=${key}`)
+  console.log(key.length)
+  fetch(`https://buymebuyme.xyz/?q=%0A${key}%0A`)
   .then(res => res.json()) 
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
-    
   
-    let poem = result.filter(item => item.length < 600);
+  
+    let poem = result.filter(item => item.length < 1000);
     let randomPoem = poem[Math.floor((Math.random() * poem.length))];
-    console.log(randomPoem);
+    // console.log(randomPoem);
 
    claimSection.insertAdjacentHTML ('beforeend', `<div class="claim__header">
    <p class="claim__paragraph claim__ministry">
