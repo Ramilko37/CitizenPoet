@@ -9,6 +9,7 @@ const themeSection = document.querySelector('.form-container-theme');
 const confirmSection = document.querySelector('.form-container-confirm');
 const sendSection = document.querySelector('.form-send');
 console.log(sendSection)
+const claimSection = document.querySelector('.claim');
 
 const sideBlock = document.querySelector('.side-block');
 const applyButton = document.querySelector(".content__button");
@@ -28,6 +29,19 @@ const formConfirmButtonSubmit = confirmSection.querySelector("#form-confirm-subm
 
 const formSendButtonClose = sendSection.querySelector('#form-send-close-button');
 
+//inputs userForm
+const inputName = infoSection.querySelector('.form__input_type_first-name');
+const inputLastName = infoSection.querySelector('.form__input_type_last-name');
+const inputPhone = infoSection.querySelector('.form__input_type_phone');
+const inputEmail = infoSection.querySelector('.form__input_type_email');
+const inputAddress = infoSection.querySelector('.form__input_type_address');
+const inputClaim = themeSection.querySelector('.form__textarea');
+
+
+
+console.log(inputName)
+
+
 applyButton.addEventListener('click', () => {
     sideBlock.classList.add('side-block_visible');
     infoSection.classList.add('form-container_visible');
@@ -41,6 +55,8 @@ formInfoButtonBack.addEventListener('click', () => {
 formInfoButtonForward.addEventListener('click', () => {
   infoSection.classList.remove('form-container_visible');
   ministrySection.classList.add('form-container_visible');
+  userDataGetInfo();
+  console.log(userData);
 })
 
 formMinistryButtonBack.addEventListener('click', () => {
@@ -61,7 +77,8 @@ formThemeButtonBack.addEventListener('click', () => {
 formThemeButtonForward.addEventListener('click', () => {
   themeSection.classList.remove('form-container_visible');
   confirmSection.classList.add('form-container_visible');
-  
+  claimSection.classList.add('form-container_visible');
+  userDataGetInfo();
 })
 
 formConfirmButtonBack.addEventListener('click', () => {
@@ -111,14 +128,104 @@ formSendButtonClose.addEventListener('click', () => {
 // const poemParagraph = document.querySelector('.content__paragraph');
 // console.log(poemParagraph)
 
-const pravda = 'правда';
 
-const ministry1 = {
 
+
+
+
+
+
+// const userData = {
+//   name: '',
+//   lastName: '',
+//   phone: '',
+//   email: '',
+//   address: '',
+
+//  
+
+
+// }
+
+const userData = {
+  name: '',
+  lastName: '',
+  phone: '',
+  email: '',
+  address: '',
+  claim: '',
+  ministries: [
+        {
+          ministry: '',
+          container: "conttrue",
+        },
+        {
+          ministry: "мир",
+          container: "conttrue",
+        },
+        {
+          ministry: "",
+          container: "",
+        },
+        {
+          ministry: "",
+          container: "",
+        },
+      ],
 }
 
-function updatePoem() 
-  {fetch(`http://www.buymebuyme.xyz?q=${pravda}`)
+function userDataGetInfo() {
+
+  userData.name = inputName.value;
+  userData.lastName = inputLastName.value;
+  userData.phone = inputPhone.value;
+  userData.email = inputEmail.value;
+  userData.address = inputAddress.value;
+  userData.claim = inputClaim.value;
+  return console.log(userData);
+}
+
+
+
+// function getInputValues() {
+//   const inputs = Array.from(infoSection.querySelectorAll('.form__input'));
+
+
+//   const obj = {};
+
+
+  
+//   inputs.forEach((input) => {
+//     console.log(input);
+//       obj[input.name] = input.value;
+//       // obj[input.lastName] = input.value
+//       // obj[input.phone] = input.value
+//       // obj[input.email] = input.value
+//   })
+//   return console.log(obj);
+
+  
+// }
+
+
+
+
+
+
+
+
+
+
+// arr.forEach(item => {
+//   updatePoem(item) 
+// });
+
+// function add () {
+//   container.textcontet
+// }
+
+function updatePoem(key) 
+  {fetch(`http://www.buymebuyme.xyz?q=${key}`)
   .then(res => res.json()) 
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
@@ -127,8 +234,10 @@ function updatePoem()
     console.log(poems)
     // let randomPoem = result[Math.floor((Math.random() * result.length))];
     // console.log(randomPoem)
+    // function add (poem) { container.textcontet = poem}
   })
 }
+
 
 // const result = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
