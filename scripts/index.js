@@ -8,6 +8,7 @@ const ministrySection = document.querySelector('.form-container-ministry');
 const themeSection = document.querySelector('.form-container-theme');
 const confirmSection = document.querySelector('.form-container-confirm');
 const sendSection = document.querySelector('.form-send');
+console.log(sendSection)
 
 const sideBlock = document.querySelector('.side-block');
 const applyButton = document.querySelector(".content__button");
@@ -27,10 +28,10 @@ const formConfirmButtonSubmit = confirmSection.querySelector("#form-confirm-subm
 
 const formSendButtonClose = sendSection.querySelector('#form-send-close-button');
 
-// applyButton.addEventListener('click', () => {
-//     sideBlock.classList.add('side-block_visible');
-//     infoSection.classList.add('form-container_visible');
-// })
+applyButton.addEventListener('click', () => {
+    sideBlock.classList.add('side-block_visible');
+    infoSection.classList.add('form-container_visible');
+})
 
 formInfoButtonBack.addEventListener('click', () => {
     sideBlock.classList.remove('side-block_visible');
@@ -60,6 +61,7 @@ formThemeButtonBack.addEventListener('click', () => {
 formThemeButtonForward.addEventListener('click', () => {
   themeSection.classList.remove('form-container_visible');
   confirmSection.classList.add('form-container_visible');
+  
 })
 
 formConfirmButtonBack.addEventListener('click', () => {
@@ -142,7 +144,7 @@ function updatePoem()
 
 
 
-applyButton.addEventListener('click', updatePoem)
+// applyButton.addEventListener('click', updatePoem)
 
 
 
