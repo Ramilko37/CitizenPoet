@@ -175,30 +175,50 @@
           <form name="form-confirm" action="POST" action='#' class="form form-confirm">
             <h2 class="form__title">Подтвердите свое
               намерение</h2>
+
             <div class="form-grid form-grid_style_confirm">
-              <label class="form__label form__label_type_first-name form__label_style_confirm" for="">Имя
-                <input type="text" class="form__input form__input_type_first-name form__input_style_confirm"
+
+              <label  class="form__label form__label_type_first-name form__label_style_confirm" for="">Имя
+
+                <div class="input-confirm-wrapper">
+                  <input id="input-confirm-name" type="text" class="form__input form__input_type_first-name form__input_style_confirm"
                   placeholder="Введите свое имя">
+                  <button type="button" class="form-confirm__edit-button"></button>
+                </div>
+
                   <span class="form__error" id='name-error'></span>
               </label>
+
               <label class="form__label form__label_type_last-name form__label_style_confirm" for="">Фамилия
-                <input type="text" class="form__input form__input_type_last-name form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-last-name"  type="text" class="form__input form__input_type_last-name form__input_style_confirm"
                   placeholder="Введите свою фамилию">
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
                   <span class="form__error" id='surname-error'></span>
               </label>
               <label class="form__label form__label_type_phone form__label_style_confirm" for="">Телефон
-                <input type="tel" class="form__input form__input_type_phone form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-phone"  type="tel" class="form__input form__input_type_phone form__input_style_confirm"
                   placeholder="+ 7  - - -  - -  - -">
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
                   <span class="form__error" id='tel-error'></span>
               </label>
               <label class="form__label form__label_type_email form__label_style_confirm" for="">Электронная почта
-                <input type="email" class="form__input form__input_type_email form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-email" type="email" class="form__input form__input_type_email form__input_style_confirm"
                   placeholder="Введите свой email">
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
                   <span class="form__error" id='email-error'></span>
               </label>
               <label class="form__label form__label_type_address form__label_style_confirm" for="">Адрес
-                <input type="text" class="form__input form__input_type_address form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-address" type="text" class="form__input form__input_type_address form__input_style_confirm"
                   placeholder="Введите свой адрес прописки">
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
                   <span class="form__error" id='address-error'></span>
               </label>
             </div>
@@ -211,11 +231,11 @@
               <div class="select-ministry__item">Мира</div>
             </div>
 
-            <div class="form__content">
+            <div class="form__content form__content-confirm">
               <label for="" class="form__label form__label form__label_style_confirm">Текст заявления
-                <textarea class="form__textarea form__textarea_style_confirm" name="" id="" cols="30"
-                  rows="10"></textarea>
+                <textarea class="form__textarea form__textarea_style_confirm" name="" id="" cols="30" rows="10"></textarea>
               </label>
+              <button type="button" class="form-confirm__edit-button form-confirm__edit-button_type_absolute"></button>
               <p class="form__paragraph form__paragraph_style_confirm">Я проверил все данные формы и согласен с ее
                 отправкой
                 и последующей обработкой любыми третьими лицами.</p>
@@ -249,7 +269,7 @@
           </div>
           <h3 class="claim__title">Заявление</h3>
           <p class="claim__text">
-            
+
           </p>
           <div class="claim__footer">
             <span class="claim__date footer-span">Дата: 13.12.2025</span>
