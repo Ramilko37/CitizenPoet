@@ -2,7 +2,7 @@
 
 export default class FormValidator {
   constructor(formElement, settings) {
-    console.log('#formElement', formElement)
+    console.log(formElement)
     this._formElement = formElement;
     this._settings = settings;
   }

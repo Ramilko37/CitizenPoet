@@ -638,6 +638,9 @@ margin-bottom: 122px;
   left: 600px;
 }
 
+.form__input_type_error { 
+  border-bottom: 1px solid #FF0000; 
+} 
 
 .claim__paragraph {
   font-family: "RobotoSlab", "Georgia", serif;
@@ -693,6 +696,37 @@ margin-bottom: 122px;
   display: none;
 }
 
+/* input:required:invalid {border-color: red;}
+
+input:required:valid {
+  border-color: green;
+}
+
+input:invalid:not(:placeholder-shown):not(:focus) {border: red} */
+
 /* .template {
   
 } */
+
+
+.form__error { 
+  opacity: 0; 
+  transition: 2s; 
+  font-style: normal; 
+  font-weight: normal; 
+  font-size: 12px; 
+  line-height: 15px; 
+  color: #FF0000; 
+} 
+
+.form__error_visible { 
+  opacity: 1; 
+  padding-top: 5px; 
+} 
+
+.form-button_type_forward_inactive {
+    background-color: #E5E5E5; 
+    border: 1px solid #000000; 
+    pointer-events: none; 
+    user-select: none; 
+}

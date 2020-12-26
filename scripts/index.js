@@ -2,6 +2,17 @@ import { settings } from './constants.js';
 import Api from './Api.js';
 import FormValidator from './FormValidator.js';
 
+// const settings = { 
+//   formSelector: '.form-container-info', 
+//   inputSelector: '.form__input', 
+//   submitButtonSelector: '.form-button_type_forward', 
+//   inactiveButtonClass: '.form-button_type_forward_inactive', 
+//   inputErrorClass: 'form__input_type_error', 
+//   errorClass: '.form__error_visible' 
+// }; 
+
+
+
 const heroSection = document.querySelector('.content')
 const infoSection = document.querySelector('.form-container-info');
 const ministrySection = document.querySelector('.form-container-ministry');
@@ -41,6 +52,93 @@ const inputClaim = themeSection.querySelector('.form__textarea');
 const ministriesList = document.querySelectorAll('.form-flex__item');
 const template = document.querySelector('.template');
 
+  const inputNameValue = inputName.value;
+  const inputLastNameValue = inputLastName.value;
+  const inputPhoneValue = inputPhone.value;
+  const inputEmailValue = inputEmail.value;
+  const inputAddressValue = inputAddress.value;
+
+const nameError = infoSection.querySelector('#name-input-error');
+console.log(nameError);
+
+
+const inputs = Array.from(infoSection.querySelectorAll('.form__input'));
+console.log(inputs);
+
+
+
+function showError() {
+  const error = infoSection.querySelector(`#${inputElement}-error`)
+
+  error.textContent = inputElement.validationMessage;
+  error.classList.add('form__error_visible')
+}
+
+function hideError() {
+  const error = infoSection.querySelector(`#${inputElement}-error`)
+
+  error.textContent = "";
+  error.classList.remove('form__error_visible')
+}
+
+function checkInputValidity(inputElement) {
+  if (!inputElement.validity.valid) {
+    showError()
+  }
+    else {
+    hideError()
+    }
+
+  console.log('fldfldpfl')
+}
+
+inputs.forEach((inputElement) => {
+  console.log(inputElement)
+  inputElement.addEventListener('input', () => {checkInputValidity(inputElement)})
+})
+
+// inputs.addEventListener('input', () => {checkInputValidity()});
+
+
+
+// inputs.forEach((item) => {
+//   addEventListener('input', ()=>{
+  
+//     if (!item.validity.valid) {
+//       nameError.textContent = inputName.validationMessage;
+//       nameError.classList.add('form__error_visible')
+//     } else {
+//       nameError.textContent = "";
+//       nameError.classList.remove('form__error_visible')
+//     }
+//   })
+// })
+
+// inputs.addEventListener('input', (input)=>{
+  
+//   if (!input.validity.valid) {
+//     nameError.textContent = inputName.validationMessage;
+//     nameError.classList.add('form__error_visible')
+//   } else {
+//     nameError.textContent = "";
+//     nameError.classList.remove('form__error_visible')
+//   }
+// })
+
+function validateForm() {
+
+
+ 
+
+  if (inputNameValue == "" ) {
+      alert("Необходимо ввести имя");
+      return false;
+  }
+} 
+
+
+
+
 function setMinistryEventListeners() {
   ministriesList.forEach(ministry => {
     ministry.addEventListener('click', () => {
@@ -49,13 +147,7 @@ function setMinistryEventListeners() {
   });
 };
 
-setMinistryEventListeners()
-
-
-
-
-
-
+setMinistryEventListeners();
 
 applyButton.addEventListener('click', () => {
     sideBlock.classList.add('side-block_visible');
@@ -70,6 +162,7 @@ formInfoButtonBack.addEventListener('click', () => {
 formInfoButtonForward.addEventListener('click', () => {
   infoSection.classList.remove('form-container_visible');
   ministrySection.classList.add('form-container_visible');
+  validateForm();
   userDataGetInfo();
   console.log(userData);
 })
