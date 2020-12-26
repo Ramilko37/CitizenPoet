@@ -37,30 +37,30 @@
           <form name="form-info" action="POST" action='#' class="form form-info">
             <h2 class="form__title">Расскажите о себе</h2>
             <div class="form-grid">
-              <label class="form__label form__label_type_first-name" for="">Имя
-                <input id='name-input' type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя" minlength="5" maxlength="20" required>
-                <span class="form__error" id='name-input-error'></span>
+              <label id="name" class="form__label form__label_type_first-name" for="">Имя
+                <input type="text" class="form__input form__input_type_first-name" placeholder="Введите свое имя" minlength="2" maxlength="20" required >
+                <span class="form__error" id='name-error'></span>
               </label>
               <label class="form__label form__label_type_last-name" for="">Фамилия
-                <input id="surname-input" type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию" minlength="2" maxlength="20" required>
-                <span class="form__error" id='surname-input-error'></span>
+                <input type="text" class="form__input form__input_type_last-name" placeholder="Введите свою фамилию" minlength="2" maxlength="20" required>
+                <span class="form__error" id='surname-error'></span>
               </label>
               <label class="form__label form__label_type_phone" for="">Телефон
-                <input id="tel-input" type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -"  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
-                <span class="form__error" id='tel-input-error'></span>
+                <input type="tel" class="form__input form__input_type_phone" placeholder="+ 7  - - -  - -  - -" minlength="12" maxlength="20" required>
+                <span class="form__error" id='tel-error'></span>
               </label>
               <label class="form__label form__label_type_email" for="">Электронная почта
-                <input id="email-input" type="email" class="form__input form__input_type_email" placeholder="Введите свой email" inputmode="email" minlength="10" maxlength="20" required>
-                <span class="form__error" id='email-input-error'></span>
+                <input type="email" class="form__input form__input_type_email" placeholder="Введите свой email" inputmode="email" minlength="10" maxlength="20" required>
+                <span class="form__error" id='email-error'></span>
               </label>
               <label class="form__label form__label_type_address" for="">Адрес
-                <input id="address-input" type="text" class="form__input form__input_type_address"
+                <input type="text" class="form__input form__input_type_address"
                   placeholder="Введите свой адрес прописки" minlength="20" maxlength="60" required>
-                  <span class="form__error" id='address-input-error'></span>
+                  <span class="form__error" id='address-error'></span>
                 </label>
             </div>
-           
-            <!-- <p class="form__authorize">Авторизовать устройство</p> -->
+            <p class="form__caption">Электронная подпись</p>
+            <p class="form__authorize">Авторизовать устройство</p>
             <p class="form__terms-of-use">
               Нажимая кнопку “Далее”, вы соглашаетесь с условиями Пользовательского соглашения и понимаете риски,
               связанные с отправкой вашего заявления в государственные инстанции.
@@ -68,7 +68,7 @@
             <div class="form-button-container">
               <button id="form-info-back-button" type="button" class="form-button form-button_type_back ">Назад</button>
               <button id="form-info-forward-button" type="button"
-                class="form-button form-button_type_forward">Далее</button>
+                class="form-button form-button_type_forward ">Далее</button>
             </div>
           </form>
         </section>
@@ -175,31 +175,51 @@
           <form name="form-confirm" action="POST" action='#' class="form form-confirm">
             <h2 class="form__title">Подтвердите свое
               намерение</h2>
+
             <div class="form-grid form-grid_style_confirm">
-              <label class="form__label form__label_type_first-name form__label_style_confirm" for="">Имя
-                <input id="name-ndjnmsndmsndmsnd" type="text" class="form__input form__input_type_first-name form__input_style_confirm"
+
+              <label  class="form__label form__label_type_first-name form__label_style_confirm" for="">Имя
+
+                <div class="input-confirm-wrapper">
+                  <input id="input-confirm-name" type="text" class="form__input form__input_type_first-name form__input_style_confirm"
                   placeholder="Введите свое имя">
-                  <span class="form__error" id='name-input-error'></span>
+                  <button type="button" class="form-confirm__edit-button"></button>
+                </div>
+
+                  <span class="form__error" id='name-error'></span>
               </label>
+
               <label class="form__label form__label_type_last-name form__label_style_confirm" for="">Фамилия
-                <input  id="surname-input" type="text" class="form__input form__input_type_last-name form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-last-name"  type="text" class="form__input form__input_type_last-name form__input_style_confirm"
                   placeholder="Введите свою фамилию">
-                  <span class="form__error" id='surname-input-error'></span>
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
+                  <span class="form__error" id='surname-error'></span>
               </label>
               <label class="form__label form__label_type_phone form__label_style_confirm" for="">Телефон
-                <input  id="tel-input" type="tel" class="form__input form__input_type_phone form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-phone"  type="tel" class="form__input form__input_type_phone form__input_style_confirm"
                   placeholder="+ 7  - - -  - -  - -">
-                  <span class="form__error" id='tel-input-error'></span>
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
+                  <span class="form__error" id='tel-error'></span>
               </label>
               <label class="form__label form__label_type_email form__label_style_confirm" for="">Электронная почта
-                <input  id="email-input" type="email" class="form__input form__input_type_email form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-email" type="email" class="form__input form__input_type_email form__input_style_confirm"
                   placeholder="Введите свой email">
-                  <span class="form__error" id='email-input-error'></span>
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
+                  <span class="form__error" id='email-error'></span>
               </label>
               <label class="form__label form__label_type_address form__label_style_confirm" for="">Адрес
-                <input  id="address-input" type="text" class="form__input form__input_type_address form__input_style_confirm"
+                <div class="input-confirm-wrapper">
+                <input id="input-confirm-address" type="text" class="form__input form__input_type_address form__input_style_confirm"
                   placeholder="Введите свой адрес прописки">
-                  <span class="form__error" id='address-input-error'></span>
+                  <button type="button" class="form-confirm__edit-button"></button>
+                  </div>
+                  <span class="form__error" id='address-error'></span>
               </label>
             </div>
 
@@ -211,11 +231,11 @@
               <div class="select-ministry__item">Мира</div>
             </div>
 
-            <div class="form__content">
+            <div class="form__content form__content-confirm">
               <label for="" class="form__label form__label form__label_style_confirm">Текст заявления
-                <textarea class="form__textarea form__textarea_style_confirm" name="" id="" cols="30"
-                  rows="10"></textarea>
+                <textarea class="form__textarea form__textarea_style_confirm" name="" id="" cols="30" rows="10"></textarea>
               </label>
+              <button type="button" class="form-confirm__edit-button form-confirm__edit-button_type_absolute"></button>
               <p class="form__paragraph form__paragraph_style_confirm">Я проверил все данные формы и согласен с ее
                 отправкой
                 и последующей обработкой любыми третьими лицами.</p>
@@ -249,31 +269,7 @@
           </div>
           <h3 class="claim__title">Заявление</h3>
           <p class="claim__text">
-            
-          </p>
-          <div class="claim__footer">
-            <span class="claim__date footer-span">Дата: 13.12.2025</span>
-            <span class="claim__sign footer-span">В. Луговской, 1926</span>
-          </div>
 
-
-
-
-          <div class="claim__header">
-            <p class="claim__paragraph claim__ministry">
-              В Министерство Правды Российской Федерации.
-            </p>
-            <p class="claim__paragraph claim__sender">
-              От: Лукьянов Евгений.
-              Проживает по адресу: Москва, Тверская улица, дом 13.
-            </p>
-            <p class="claim__paragraph claim__phone">
-              Телефон: +7 (954) 648-53-78
-            </p>
-          </div>
-          <h3 class="claim__title">Заявление</h3>
-          <p class="claim__text">
-          
           </p>
           <div class="claim__footer">
             <span class="claim__date footer-span">Дата: 13.12.2025</span>
