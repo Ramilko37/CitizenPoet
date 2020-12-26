@@ -756,7 +756,3 @@ input:invalid:not(:placeholder-shown):not(:focus) {border: red} */
     pointer-events: none; 
     user-select: none; 
 }
-=======
-
-} */
->>>>>>> 9c1b4551a87a3af45f67eaf168e8d0e7f0ae2594
