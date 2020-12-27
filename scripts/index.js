@@ -1,16 +1,16 @@
-import { settings } from './constants.js';
-import Api from './Api.js';
-import FormValidator from './FormValidator.js';
+// enableValidation()
 
-// const settings = { 
-//   formSelector: '.form-container-info', 
-//   inputSelector: '.form__input', 
-//   submitButtonSelector: '.form-button_type_forward', 
-//   inactiveButtonClass: '.form-button_type_forward_inactive', 
-//   inputErrorClass: 'form__input_type_error', 
-//   errorClass: '.form__error_visible' 
-// }; 
+const userData = {
+  name: '',
+  lastName: '',
+  phone: '',
+  email: '',
+  address: '',
+  claim: '',
+  ministries: [
 
+      ],
+}
 
 
 const heroSection = document.querySelector('.content')
@@ -19,7 +19,6 @@ const ministrySection = document.querySelector('.form-container-ministry');
 const themeSection = document.querySelector('.form-container-theme');
 const confirmSection = document.querySelector('.form-container-confirm');
 const sendSection = document.querySelector('.form-send');
-console.log(sendSection)
 const claimSection = document.querySelector('.claim');
 
 const sideBlock = document.querySelector('.side-block');
@@ -31,6 +30,7 @@ const formInfoButtonForward = infoSection.querySelector("#form-info-forward-butt
 
 const formMinistryButtonBack = ministrySection.querySelector("#form-ministry-back-button");
 const formMinistryButtonForward = ministrySection.querySelector("#form-ministry-forward-button");
+
 
 const formThemeButtonBack = themeSection.querySelector("#form-theme-back-button");
 const formThemeButtonForward = themeSection.querySelector("#form-theme-forward-button");
@@ -47,108 +47,49 @@ const inputPhone = infoSection.querySelector('.form__input_type_phone');
 const inputEmail = infoSection.querySelector('.form__input_type_email');
 const inputAddress = infoSection.querySelector('.form__input_type_address');
 const inputClaim = themeSection.querySelector('.form__textarea');
+//inputs formConfirm
+const confrmInputName = confirmSection.querySelector('#input-confirm-name');
+const confrmInputLastName = confirmSection.querySelector('#input-confirm-last-name');
+const confrmInputPhone = confirmSection.querySelector('#input-confirm-phone');
+const confrmInputEmail = confirmSection.querySelector('#input-confirm-email');
+const confrmInputAddress = confirmSection.querySelector('#input-confirm-address');
+const confrmTextareaClaim = confirmSection.querySelector('#textarea-confirm-address');
 
 
 const ministriesList = document.querySelectorAll('.form-flex__item');
+const confMini = Array.from(document.querySelectorAll('.select-ministry__item'))
+
+
 const template = document.querySelector('.template');
 
-  const inputNameValue = inputName.value;
-  const inputLastNameValue = inputLastName.value;
-  const inputPhoneValue = inputPhone.value;
-  const inputEmailValue = inputEmail.value;
-  const inputAddressValue = inputAddress.value;
-
-const nameError = infoSection.querySelector('#name-input-error');
-console.log(nameError);
-
-
-const inputs = Array.from(infoSection.querySelectorAll('.form__input'));
-console.log(inputs);
-
-
-
-function showError() {
-  const error = infoSection.querySelector(`#${inputElement}-error`)
-
-  error.textContent = inputElement.validationMessage;
-  error.classList.add('form__error_visible')
-}
-
-function hideError() {
-  const error = infoSection.querySelector(`#${inputElement}-error`)
-
-  error.textContent = "";
-  error.classList.remove('form__error_visible')
-}
-
-function checkInputValidity(inputElement) {
-  if (!inputElement.validity.valid) {
-    showError()
+  function setConfirmValues() {
+    confrmInputName.value = userData.name;
+    confrmInputLastName.value = userData.lastName;
+    confrmInputPhone.value = userData.phone;
+    confrmInputEmail.value = userData.email;
+    confrmInputAddress.value = userData.address;
+    confrmTextareaClaim.value = userData.claim;
   }
-    else {
-    hideError()
-    }
 
-  console.log('fldfldpfl')
-}
-
-inputs.forEach((inputElement) => {
-  console.log(inputElement)
-  inputElement.addEventListener('input', () => {checkInputValidity(inputElement)})
-})
-
-// inputs.addEventListener('input', () => {checkInputValidity()});
-
-
-
-// inputs.forEach((item) => {
-//   addEventListener('input', ()=>{
-  
-//     if (!item.validity.valid) {
-//       nameError.textContent = inputName.validationMessage;
-//       nameError.classList.add('form__error_visible')
-//     } else {
-//       nameError.textContent = "";
-//       nameError.classList.remove('form__error_visible')
-//     }
-//   })
-// })
-
-// inputs.addEventListener('input', (input)=>{
-  
-//   if (!input.validity.valid) {
-//     nameError.textContent = inputName.validationMessage;
-//     nameError.classList.add('form__error_visible')
-//   } else {
-//     nameError.textContent = "";
-//     nameError.classList.remove('form__error_visible')
-//   }
-// })
-
-function validateForm() {
-
-
- 
-
-  if (inputNameValue == "" ) {
-      alert("Необходимо ввести имя");
-      return false;
+  function ministryClickHandler (evt) {
+    evt.target.closest('.form-flex__item').classList.toggle('active-ministry')
   }
-} 
+
+  function setMinistryEventListeners() {
+    ministriesList.forEach(ministry => {
+      ministry.addEventListener('click', ministryClickHandler)
+    })
+  }
+
+  function unsetMinistryEventListeners() {
+    ministriesList.forEach(ministry => {
+      ministry.removeEventListener('click', ministryClickHandler)
+    })
+  }
 
 
 
-
-function setMinistryEventListeners() {
-  ministriesList.forEach(ministry => {
-    ministry.addEventListener('click', () => {
-      ministry.classList.toggle('active-ministry')
-    });
-  });
-};
-
-setMinistryEventListeners();
-
+//------------- кнопки
 applyButton.addEventListener('click', () => {
     sideBlock.classList.add('side-block_visible');
     infoSection.classList.add('form-container_visible');
@@ -162,7 +103,7 @@ formInfoButtonBack.addEventListener('click', () => {
 formInfoButtonForward.addEventListener('click', () => {
   infoSection.classList.remove('form-container_visible');
   ministrySection.classList.add('form-container_visible');
-  validateForm();
+  setMinistryEventListeners()
   userDataGetInfo();
   console.log(userData);
 })
@@ -170,6 +111,7 @@ formInfoButtonForward.addEventListener('click', () => {
 formMinistryButtonBack.addEventListener('click', () => {
   ministrySection.classList.remove('form-container_visible');
   infoSection.classList.add('form-container_visible');
+  unsetMinistryEventListeners()
 })
 
 formMinistryButtonForward.addEventListener('click', () => {
@@ -181,24 +123,22 @@ formMinistryButtonForward.addEventListener('click', () => {
   userData.ministries = array.map((item) => {
     return  ' ' + item + ' ';
   });
+  unsetMinistryEventListeners()
 
-
-  // userData.ministries[0].ministryName = array[0];
-  // userData.ministries[1].ministryName = array[1];
-  // userData.ministries[2].ministryName = array[2];
-  // userData.ministries[3].ministryName = array[3];
   console.log(userData.ministries)
 })
 
 formThemeButtonBack.addEventListener('click', () => {
   themeSection.classList.remove('form-container_visible');
   ministrySection.classList.add('form-container_visible');
+  setMinistryEventListeners()
 })
 
 formThemeButtonForward.addEventListener('click', () => {
   themeSection.classList.remove('form-container_visible');
   confirmSection.classList.add('form-container_visible');
   claimSection.classList.add('form-container_visible');
+  setConfirmValues();
   userClaimGetInfo();
 })
 
@@ -206,7 +146,7 @@ formThemeButtonForward.addEventListener('click', () => {
   console.log(userData.ministries)
   userData.ministries.forEach((key) => {
    getPoem(key);
-   
+
   })
 })
 
@@ -234,17 +174,6 @@ formSendButtonClose.addEventListener('click', () => {
 
 // const templateHTML = ''
 
-const userData = {
-  name: '',
-  lastName: '',
-  phone: '',
-  email: '',
-  address: '',
-  claim: '',
-  ministries: [
-        
-      ],
-}
 
 function userDataGetInfo() {
 
@@ -268,14 +197,14 @@ function getActiveMinistry() {
   const activeMinistryNames = activeMinistry.map((item) => {
     return item.querySelector('.form-flex__title').textContent.slice(13);
   })
-  
+
 return activeMinistryNames;
 }
 
 // const anyArray = getActiveMinistry();
 
 // arr.forEach(item => {
-//   updatePoem(item) 
+//   updatePoem(item)
 // });
 
 // function add () {
@@ -287,11 +216,11 @@ return activeMinistryNames;
 
 function getPoem(key) {
   fetch(`http://www.buymebuyme.xyz?q=${key}`)
-  .then(res => res.json()) 
+  .then(res => res.json())
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
-  
-  
+
+
     let poem = result.filter(item => item.length < 1000);
     let randomPoem = poem[Math.floor((Math.random() * poem.length))];
     // console.log(randomPoem);
@@ -335,7 +264,7 @@ function getPoem(key) {
 
 // let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 //   // Возвращает элемент для new_array
-// }[, thisArg])  
+// }[, thisArg])
 
 
 
@@ -345,5 +274,5 @@ function getPoem(key) {
 
 
 
-const infoSectionValidation = new FormValidator(infoSection, settings);
-infoSectionValidation.enableValidation();
+// const infoSectionValidation = new FormValidator(infoSection, settings);
+// infoSectionValidation.enableValidation();

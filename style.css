@@ -113,6 +113,7 @@
 }
 
 
+
 .form-send {
   display: none;
   flex-direction: column;
@@ -485,6 +486,7 @@ letter-spacing: 0.01em;
 
 .active-ministry {
   background-color: #C4C4C4;
+  border: #FF0000 1px solid;
 }
 
 /* .form-flex__item:nth-of-type(even) {
@@ -619,6 +621,7 @@ margin-bottom: 122px;
 .select-ministry {
   display: flex;
   margin: 0 0 24px 56px;
+  width: 100%;
 }
 
 .form__textarea_style_confirm {
@@ -632,6 +635,7 @@ margin-bottom: 122px;
   position: absolute;
 top: 18px;
 left: 0;
+width: 100%;
 }
 
 .form-confirm__subtitle {
@@ -663,9 +667,9 @@ left: 0;
   left: 600px;
 }
 
-.form__input_type_error { 
-  border-bottom: 1px solid #FF0000; 
-} 
+.form__input_type_error {
+  border-bottom: 1px solid #FF0000;
+}
 
 .claim__paragraph {
   font-family: "RobotoSlab", "Georgia", serif;
@@ -731,28 +735,40 @@ input:invalid:not(:placeholder-shown):not(:focus) {border: red} */
 
 /* .template {
 <<<<<<< HEAD
-  
+
 } */
 
 
-.form__error { 
-  opacity: 0; 
-  transition: 2s; 
-  font-style: normal; 
-  font-weight: normal; 
-  font-size: 12px; 
-  line-height: 15px; 
-  color: #FF0000; 
-} 
+.form__error {
+  opacity: 0;
+  transition: .2s;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+}
 
-.form__error_visible { 
-  opacity: 1; 
-  padding-top: 5px; 
-} 
+.form__error_visible {
+  opacity: 1;
+  padding-top: 5px;
+}
 
 .form-button_type_forward_inactive {
-    background-color: #E5E5E5; 
-    border: 1px solid #000000; 
-    pointer-events: none; 
-    user-select: none; 
+    background-color: #E5E5E5;
+    border: 1px solid #000000;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* validation */
+.form__input_invalid {
+  border-bottom: #FF0000 1px solid;
+}
+
+.form__button_invalid {
+  background-color: #c4c4c4;
+  border: none;
+  color: #000000;
+  opacity: .5;
 }
