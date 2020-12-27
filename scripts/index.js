@@ -89,29 +89,29 @@ navNextButton.addEventListener('click', () => {
 if (counter === 1) {
   navPrevButton.disabled = true;
 }
-  navPrevButton.addEventListener('click', (evt) => {
+  // navPrevButton.addEventListener('click', (evt) => {
 
-    if (counter < 4) {
-      const currentClaim = claimSection.querySelector(`#claim${counter}`)
-      const nextClaim = claimSection.querySelector(`#claim${counter + 1}`)
+  //   if (counter < 4) {
+  //     const currentClaim = claimSection.querySelector(`#claim${counter}`)
+  //     const nextClaim = claimSection.querySelector(`#claim${counter + 1}`)
 
-      console.log(counter)
+  //     console.log(counter)
 
-      currentClaim.classList.remove('claim__show')
-      nextClaim.classList.add('claim__show')
-      counter++
-    } else if (counter === 4) {
-      const currentClaim = claimSection.querySelector(`#claim${counter}`)
-      const nextClaim = claimSection.querySelector(`#claim${counter-3}`)
+  //     currentClaim.classList.remove('claim__show')
+  //     nextClaim.classList.add('claim__show')
+  //     counter++
+  //   } else if (counter === 4) {
+  //     const currentClaim = claimSection.querySelector(`#claim${counter}`)
+  //     const nextClaim = claimSection.querySelector(`#claim${counter-3}`)
 
-      console.log(counter)
+  //     console.log(counter)
 
-      currentClaim.classList.remove('claim__show')
-      nextClaim.classList.add('claim__show')
-      counter = 1;
-    }
-  }
-  )
+  //     currentClaim.classList.remove('claim__show')
+  //     nextClaim.classList.add('claim__show')
+  //     counter = 1;
+  //   }
+  // }
+  // )
 
 // const currentClaim = claimSection.querySelector(`#claim${counter}`)
 // const nextClaim = claimSection.querySelector(`#claim${counter + 1}`)

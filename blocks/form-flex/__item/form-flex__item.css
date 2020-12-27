@@ -5,16 +5,17 @@
     margin-right: 104px;
     margin-bottom: 48px;
     margin-top: 16px;
+
   }
-  
+
   .form-flex__item:nth-of-type(even) {
     margin-right: 0;
   }
-  
+
   .form-flex__item:nth-last-of-type(1) {
     margin-bottom: 0;
   }
-  
+
   .form-flex__item:nth-last-of-type(2) {
     margin-bottom: 0;
   }

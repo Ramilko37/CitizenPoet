@@ -18,7 +18,6 @@
   min-width: 320px;
   background-color: #F4ECD6;
   margin: 0 auto;
-  outline: 1px red solid;
 }
 
 /* @media screen and (max-width: 640px) {
@@ -224,6 +223,7 @@
   transition: 0.5s;
 }
 
+
 .form-container_visible {
   display: block;
 }
@@ -301,7 +301,7 @@ margin: 0 0 24px;
 
 @media screen and (max-width: 640px) {
   .form__label {
-    width: 288px;
+    /* width: 288px; */
     font-size: 12px;
     line-height: 120%;
   }
@@ -336,7 +336,7 @@ input::-moz-placeholder {
 
 @media screen and (max-width: 640px) {
   .form__input {
-    width: 136px;
+    width: 129px;
     font-size: 11px;
   }
 
@@ -344,6 +344,7 @@ input::-moz-placeholder {
     width: 288px;
   } */
 }
+
 
 
 
@@ -461,9 +462,9 @@ letter-spacing: 0.01em;
   .form-flex {
     display: grid;
     grid-template-columns: repeat(2, 136px);
+    max-width: 288px;
   }
 }
-
 
 .form-flex__item {
   display: flex;
@@ -474,19 +475,23 @@ letter-spacing: 0.01em;
   padding: 16px;
   background-color: #fff;
   border: 0;
-}
+  }
+
+
+
 
 @media screen and (max-width: 640px) {
   .form-flex__item {
     width: 136px;
     height: 136px;
     background-image: url(./images/ministry_pravdi.png);
+    background-size: contain;
   }
 }
 
 .active-ministry {
   background-color: #C4C4C4;
-  border: #FF0000 1px solid;
+
 }
 
 /* .form-flex__item:nth-of-type(even) {
@@ -538,6 +543,17 @@ letter-spacing: 0.01em;
   flex-direction: column;
 }
 
+@media screen and (max-width: 640px) {
+  .form__content {
+    width: 288px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    }
+
+
+}
+
 .form__textarea {
   width: 100%;
   height: 168px;
@@ -547,6 +563,15 @@ letter-spacing: 0.01em;
   resize: none;
   border: 0;
   border-bottom: 1px solid #C4C4C4;
+}
+
+
+@media screen and (max-width: 640px) {
+  .form__textarea {
+   max-width: 300px;
+   display: block;
+   margin-right: 0;
+  }
 }
 
 .form__paragraph {
@@ -575,6 +600,33 @@ margin-bottom: 122px;
 .form-grid_style_confirm {
   gap: 24px 30px;
   margin-bottom: 24px;
+}
+
+
+@media screen and (max-width: 640px) {
+  .form-flex__item_peace {
+    background-image: url(./images/ic-peace.svg);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form-flex__item_love {
+    background-image: url(./images/ic-love.svg);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form-flex__item_wealth {
+
+    background-image: url(./images/ic-wealth.svg);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form-flex__item_truth {
+
+    background-image: url(./images/ic-truth.svg);
+  }
 }
 
 
