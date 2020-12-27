@@ -1,4 +1,4 @@
-// enableValidation()
+enableValidation()
 
 const userData = {
   name: '',
