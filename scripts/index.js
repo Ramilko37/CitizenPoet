@@ -1,4 +1,4 @@
-enableValidation()
+// enableValidation()
 
 const userData = {
   name: '',
@@ -57,13 +57,74 @@ const confrmInputEmail = confirmSection.querySelector('#input-confirm-email');
 const confrmInputAddress = confirmSection.querySelector('#input-confirm-address');
 const confrmTextareaClaim = confirmSection.querySelector('#textarea-confirm-claim');
 const navNextButton = confirmSection.querySelector('.next');
-
+let forvardCounter = 1
+const navPrevButton = confirmSection.querySelector('.prev');
+let counter = 1
 
 let innerClaimsList = []
-navNextButton.addEventListener('click', () => {
-console.log(innerClaimsList)
 
-})
+navNextButton.addEventListener('click', () => {
+
+  if (forvardCounter < innerClaimsList.length) {
+    const currentClaim = claimSection.querySelector(`#claim${forvardCounter}`)
+    const nextClaim = claimSection.querySelector(`#claim${forvardCounter + 1}`)
+
+    console.log(forvardCounter)
+
+    currentClaim.classList.remove('claim__show')
+    nextClaim.classList.add('claim__show')
+    forvardCounter++
+  } else if (forvardCounter === innerClaimsList.length) {
+    const currentClaim = claimSection.querySelector(`#claim${forvardCounter}`)
+    const nextClaim = claimSection.querySelector(`#claim${forvardCounter-(innerClaimsList.length - 1)}`)
+
+    console.log(forvardCounter)
+
+    currentClaim.classList.remove('claim__show')
+    nextClaim.classList.add('claim__show')
+    forvardCounter = 1;
+  }
+}
+)
+if (counter === 1) {
+  navPrevButton.disabled = true;
+}
+  navPrevButton.addEventListener('click', (evt) => {
+
+    if (counter < 4) {
+      const currentClaim = claimSection.querySelector(`#claim${counter}`)
+      const nextClaim = claimSection.querySelector(`#claim${counter + 1}`)
+
+      console.log(counter)
+
+      currentClaim.classList.remove('claim__show')
+      nextClaim.classList.add('claim__show')
+      counter++
+    } else if (counter === 4) {
+      const currentClaim = claimSection.querySelector(`#claim${counter}`)
+      const nextClaim = claimSection.querySelector(`#claim${counter-3}`)
+
+      console.log(counter)
+
+      currentClaim.classList.remove('claim__show')
+      nextClaim.classList.add('claim__show')
+      counter = 1;
+    }
+  }
+  )
+
+// const currentClaim = claimSection.querySelector(`#claim${counter}`)
+// const nextClaim = claimSection.querySelector(`#claim${counter + 1}`)
+
+// console.log(counter)
+
+// currentClaim.classList.remove('claim__show')
+// nextClaim.classList.add('claim__show')
+
+
+
+
+// })
 
 
 // const claimsList = setTimeout(getClainsList, 2000)
@@ -88,12 +149,18 @@ const template = document.querySelector('.template');
 
   function ministryClickHandler (evt) {
     evt.target.closest('.form-flex__item').classList.toggle('active-ministry')
+    // evt.target.closest('.form-flex__item').id.classList.toggle('active-ministry')
+    const confirmMinistry = confirmSection.querySelector(`#${evt.target.closest('.form-flex__item').id}`)
+    confirmMinistry.classList.toggle('select-ministry__item_active')
+
   }
 
   function setMinistryEventListeners() {
     ministriesList.forEach(ministry => {
       ministry.addEventListener('click', ministryClickHandler)
+
     })
+
   }
 
   function unsetMinistryEventListeners() {
@@ -101,6 +168,36 @@ const template = document.querySelector('.template');
       ministry.removeEventListener('click', ministryClickHandler)
     })
   }
+
+
+
+
+function setConfirmMinistries() {
+  const userMinistries = userData.ministries;
+  console.log(userMinistries)
+  const confirmMinistriesSelectors = Array.from(confirmSection.querySelectorAll('.select-ministry__item'))
+  console.log(confirmMinistriesSelectors)
+
+
+
+  // const confirmMinistries = confirmMinistriesSelectors.map(selector => {
+  //   return ` ${selector.textContent} `;
+  // })
+  // console.log(userMinistries)
+
+// console.log(confirmMinistriesSelectors)
+
+// confirmMinistriesSelectors.forEach((item, index) => {
+//   const itemTextList = confirmMinistriesSelectors.map(() => item.textContent)
+
+//   if (itemTextList.includes(userMinistries[index])) {
+//     console.log(item)
+//     console.log(index)
+//     item.classList.add('select-ministry__item_active')
+//   }
+// })
+
+}
 
 
 
@@ -120,7 +217,7 @@ formInfoButtonForward.addEventListener('click', () => {
   ministrySection.classList.add('form-container_visible');
   setMinistryEventListeners()
   userDataGetInfo();
-  console.log(userData);
+  // console.log(userData);
 })
 
 formMinistryButtonBack.addEventListener('click', () => {
@@ -134,7 +231,7 @@ formMinistryButtonForward.addEventListener('click', () => {
   themeSection.classList.add('form-container_visible');
   // getActiveMinistry();
   const array = getActiveMinistry();
-  console.log(array);
+  // console.log(array);
   userData.ministries = array.map((item) => {
     return  ' ' + item + ' ';
   });
@@ -142,7 +239,7 @@ formMinistryButtonForward.addEventListener('click', () => {
   userData.ministries.forEach((key, index) => {
      getPoem(key, index);
     })
-  console.log(userData.ministries)
+  // console.log(userData.ministries)
 })
 
 formThemeButtonBack.addEventListener('click', () => {
@@ -157,17 +254,17 @@ formThemeButtonForward.addEventListener('click', () => {
   claimSection.classList.add('form-container_visible');
   userClaimGetInfo();
   setConfirmValues();
+  // console.log(userData.ministries)
+  // setConfirmMinistries();
 
 })
 
 formThemeButtonForward.addEventListener('click', () => {
-  console.log(userData.ministries)
-  // userData.ministries.forEach((key, index) => {
-  //  getPoem(key, index);
-  // })
+  // console.log(userData.ministries)
   const claimsList = Array.from(document.querySelectorAll('.claim'));
   innerClaimsList = claimsList;
   document.querySelector('#claim1').classList.add('claim__show')
+  setConfirmMinistries()
 })
 
 
@@ -203,7 +300,7 @@ function userDataGetInfo() {
   userData.address = inputAddress.value;
   // userData.claim = inputClaim.value;
 
-  return console.log(userData);
+  // return console.log(userData);
 }
 
 function userClaimGetInfo() {
@@ -211,23 +308,17 @@ function userClaimGetInfo() {
 }
 
 function getActiveMinistry() {
-  const activeMinistry = Array.from(document.querySelectorAll('.active-ministry'));
+  const activeMinistry = Array.from(ministrySection.querySelectorAll('.active-ministry'));
   const activeMinistryNames = activeMinistry.map((item) => {
-    return item.querySelector('.form-flex__title').textContent.slice(13);
+    const text = item.querySelector('.form-flex__title').textContent.slice(13)
+    // text.slice(13)
+    // return item.querySelector('.form-flex__title').textContent;
+    return text.slice(0, text.length - 2)
   })
 
 return activeMinistryNames;
 }
 
-// const anyArray = getActiveMinistry();
-
-// arr.forEach(item => {
-//   updatePoem(item)
-// });
-
-// function add () {
-//   container.textcontet
-// }
 
 
 
@@ -239,7 +330,7 @@ function getPoem(key, index) {
     let result = obj1.map(({ fields }) => fields.text);
 
 
-    let poem = result.filter(item => item.length < 600);
+    let poem = result.filter(item => item.length < 1200);
     let randomPoem = poem[Math.floor((Math.random() * poem.length))];
 
 

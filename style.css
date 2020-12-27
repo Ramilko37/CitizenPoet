@@ -652,9 +652,13 @@ width: 100%;
   margin-right: 16px;
   border: 1px solid #262A4F;
   border-radius: 2px;
-  background-color: #E8EAEE;
+  background-color: #fff;
   padding: 4px 8px;
 
+}
+
+.select-ministry__item_active {
+  background-color: #E8EAEE;
 }
 
 .form__paragraph_style_confirm {
