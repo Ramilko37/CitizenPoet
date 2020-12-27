@@ -23,19 +23,6 @@ const sendSection = document.querySelector('.form-send');
 const claimSection = document.querySelector('.claim-container');
 
 
-const sideBlock = document.querySelector('.side-block');
-const applyButton = document.querySelector(".content__button");
-
-const formInfoButtonBack = infoSection.querySelector("#form-info-back-button");
-const formInfoButtonForward = infoSection.querySelector("#form-info-forward-button");
-
-
-const formMinistryButtonBack = ministrySection.querySelector("#form-ministry-back-button");
-const formMinistryButtonForward = ministrySection.querySelector("#form-ministry-forward-button");
-
-
-const formThemeButtonBack = themeSection.querySelector("#form-theme-back-button");
-const formThemeButtonForward = themeSection.querySelector("#form-theme-forward-button");
 
 const formConfirmButtonBack = confirmSection.querySelector("#form-confirm-back-button");
 const formConfirmButtonSubmit = confirmSection.querySelector("#form-confirm-submit-button");
