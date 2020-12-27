@@ -19,7 +19,9 @@ const ministrySection = document.querySelector('.form-container-ministry');
 const themeSection = document.querySelector('.form-container-theme');
 const confirmSection = document.querySelector('.form-container-confirm');
 const sendSection = document.querySelector('.form-send');
-const claimSection = document.querySelector('.claim');
+// const claimSection = document.querySelector('.claim');
+const claimSection = document.querySelector('.claim-container');
+
 
 const sideBlock = document.querySelector('.side-block');
 const applyButton = document.querySelector(".content__button");
@@ -53,7 +55,18 @@ const confrmInputLastName = confirmSection.querySelector('#input-confirm-last-na
 const confrmInputPhone = confirmSection.querySelector('#input-confirm-phone');
 const confrmInputEmail = confirmSection.querySelector('#input-confirm-email');
 const confrmInputAddress = confirmSection.querySelector('#input-confirm-address');
-const confrmTextareaClaim = confirmSection.querySelector('#textarea-confirm-address');
+const confrmTextareaClaim = confirmSection.querySelector('#textarea-confirm-claim');
+const navNextButton = confirmSection.querySelector('.next');
+
+
+let innerClaimsList = []
+navNextButton.addEventListener('click', () => {
+console.log(innerClaimsList)
+
+})
+
+
+// const claimsList = setTimeout(getClainsList, 2000)
 
 
 const ministriesList = document.querySelectorAll('.form-flex__item');
@@ -69,7 +82,9 @@ const template = document.querySelector('.template');
     confrmInputEmail.value = userData.email;
     confrmInputAddress.value = userData.address;
     confrmTextareaClaim.value = userData.claim;
+    // inputClaim.value = userData.claim;
   }
+
 
   function ministryClickHandler (evt) {
     evt.target.closest('.form-flex__item').classList.toggle('active-ministry')
@@ -124,7 +139,9 @@ formMinistryButtonForward.addEventListener('click', () => {
     return  ' ' + item + ' ';
   });
   unsetMinistryEventListeners()
-
+  userData.ministries.forEach((key, index) => {
+     getPoem(key, index);
+    })
   console.log(userData.ministries)
 })
 
@@ -138,17 +155,24 @@ formThemeButtonForward.addEventListener('click', () => {
   themeSection.classList.remove('form-container_visible');
   confirmSection.classList.add('form-container_visible');
   claimSection.classList.add('form-container_visible');
-  setConfirmValues();
   userClaimGetInfo();
+  setConfirmValues();
+
 })
 
 formThemeButtonForward.addEventListener('click', () => {
   console.log(userData.ministries)
-  userData.ministries.forEach((key) => {
-   getPoem(key);
-
-  })
+  // userData.ministries.forEach((key, index) => {
+  //  getPoem(key, index);
+  // })
+  const claimsList = Array.from(document.querySelectorAll('.claim'));
+  innerClaimsList = claimsList;
+  document.querySelector('#claim1').classList.add('claim__show')
 })
+
+
+// const claimsList = document.querySelectorAll('.claim');
+// claimsList[0].classList.add('.claim__show')
 
 formConfirmButtonBack.addEventListener('click', () => {
   themeSection.classList.add('form-container_visible');
@@ -170,11 +194,6 @@ formSendButtonClose.addEventListener('click', () => {
 
 
 
-
-
-// const templateHTML = ''
-
-
 function userDataGetInfo() {
 
   userData.name = inputName.value;
@@ -189,7 +208,6 @@ function userDataGetInfo() {
 
 function userClaimGetInfo() {
   userData.claim = inputClaim.value;
-  return console.log(userData);
 }
 
 function getActiveMinistry() {
@@ -214,18 +232,20 @@ return activeMinistryNames;
 
 
 
-function getPoem(key) {
+function getPoem(key, index) {
   fetch(`http://www.buymebuyme.xyz?q=${key}`)
   .then(res => res.json())
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
 
 
-    let poem = result.filter(item => item.length < 1000);
+    let poem = result.filter(item => item.length < 600);
     let randomPoem = poem[Math.floor((Math.random() * poem.length))];
-    // console.log(randomPoem);
 
-   claimSection.insertAdjacentHTML ('beforeend', `<div class="claim__header">
+
+   claimSection.insertAdjacentHTML ('afterbegin', `
+   <section id="claim${index + 1}" class="claim form-container form-container_claim">
+   <div class="claim__header">
    <p class="claim__paragraph claim__ministry">
      В Министерство Правды Российской Федерации.
    </p>
@@ -244,7 +264,9 @@ function getPoem(key) {
  <div class="claim__footer">
    <span class="claim__date footer-span">Дата: 13.12.2025</span>
    <span class="claim__sign footer-span">В. Луговской, 1926</span>
- </div>`)
+ </div>
+ </section>`
+ )
 
 
     // let randomPoem = result[Math.floor((Math.random() * result.length))];
@@ -254,25 +276,13 @@ function getPoem(key) {
 }
 
 
-// const result = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-// const result = words.filter(word => word.length > 6);
-// let result = obj1.filter(item => item.fields.text);
+// const claims = document.querySelectorAll('.claim');
+// const currentClaim = 0;
+// const claimInterval = setInterval(nextSlide,2000);
 
-
-
-
-// let new_array = arr.map(function callback( currentValue[, index[, array]]) {
-//   // Возвращает элемент для new_array
-// }[, thisArg])
-
-
-
-// applyButton.addEventListener('click', updatePoem)
-
-
-
-
-
-// const infoSectionValidation = new FormValidator(infoSection, settings);
-// infoSectionValidation.enableValidation();
+// function nextClaim() {
+//     claims[currentClaim].classList.add('claim');
+//     currentClaim = (currentClaim+1)%claims.length;
+//     claims[currentClaim].classList.add('claim__show');
+// }

@@ -671,6 +671,24 @@ width: 100%;
   border-bottom: 1px solid #FF0000;
 }
 
+.claim {
+  display: block;
+  /* position: static; */
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  z-index: 1;
+}
+
+.claim__show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.claim__hide {
+
+}
+
 .claim__paragraph {
   font-family: "RobotoSlab", "Georgia", serif;
   font-size: 12px;
@@ -721,9 +739,30 @@ width: 100%;
   color: #212121;
 }
 
+/* .claim-container {
+  display: flex;
+
+} */
+
+.navigation {
+  position: absolute;
+  border: #FF0000 1px solid;
+  right: -510px;
+  bottom: 0;
+  width: 404px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
 .hidden {
   display: none;
 }
+
+.claim__header {
+  margin: 41px 16px 24px 296px;
+}
+
 
 /* input:required:invalid {border-color: red;}
 
