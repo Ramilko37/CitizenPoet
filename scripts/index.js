@@ -324,7 +324,7 @@ return activeMinistryNames;
 
 
 function getPoem(key, index) {
-  fetch(`http://www.buymebuyme.xyz?q=${key}`)
+  fetch(`https://www.buymebuyme.xyz?q=${key}`)
   .then(res => res.json())
   .then((data) => {const obj1 = data;
     let result = obj1.map(({ fields }) => fields.text);
