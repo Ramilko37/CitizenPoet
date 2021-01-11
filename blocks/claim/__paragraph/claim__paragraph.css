@@ -1,0 +1,11 @@
+.claim__paragraph {
+    font-family: "RobotoSlab", "Georgia", serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #212121;
+    margin: 0 0 16px;
+}
+  
+  .claim__paragraph:last-of-type {
+    margin-bottom: 0;
+}

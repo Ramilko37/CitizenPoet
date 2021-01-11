@@ -1,0 +1,8 @@
+.form-grid {
+    /* outline: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, 224px);
+    gap: 64px 24px ;
+    width: calc(100% - (56px*2));
+    margin: 40px auto 128px;
+}

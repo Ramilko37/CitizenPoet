@@ -1,0 +1,14 @@
+<svg width="694" height="694" viewBox="0 0 694 694" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="347" cy="354" r="336" fill="#F4ECD6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M347 628C498.326 628 621 505.326 621 354C621 202.674 498.326 80 347 80C195.674 80 73 202.674 73 354C73 505.326 195.674 628 347 628ZM347 640C504.953 640 633 511.953 633 354C633 196.047 504.953 68 347 68C189.047 68 61 196.047 61 354C61 511.953 189.047 640 347 640Z" fill="#262A4F"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M347 672C522.627 672 665 529.627 665 354C665 178.373 522.627 36 347 36C171.373 36 29 178.373 29 354C29 529.627 171.373 672 347 672ZM347 690C532.568 690 683 539.568 683 354C683 168.432 532.568 18 347 18C161.432 18 11 168.432 11 354C11 539.568 161.432 690 347 690Z" fill="#262A4F"/>
+<circle cx="424.332" cy="391.269" r="102" transform="rotate(-180 424.332 391.269)" fill="white"/>
+<circle cx="274" cy="329" r="102" fill="white"/>
+<rect x="470.964" y="337.268" width="12" height="117.031" transform="rotate(-135 470.964 337.268)" fill="#262A4F"/>
+<path d="M460 248L544.5 245.5L553.5 254.5L542.5 259L460 260V248Z" fill="#262A4F"/>
+<path d="M542.5 336.5L540.5 255L545.5 246.5L553.5 254L554.5 336.5L542.5 336.5Z" fill="#262A4F"/>
+<circle cx="392.25" cy="391.019" r="96" transform="rotate(-135 392.25 391.019)" stroke="#262A4F" stroke-width="12"/>
+<rect x="227.368" y="383" width="12" height="119.314" transform="rotate(45 227.368 383)" fill="#262A4F"/>
+<rect x="146.122" y="403.485" width="98.4272" height="12" transform="rotate(45 146.122 403.485)" fill="#262A4F"/>
+<circle cx="306.082" cy="329.25" r="96" transform="rotate(45 306.082 329.25)" stroke="#262A4F" stroke-width="12"/>
+</svg>

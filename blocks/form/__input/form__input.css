@@ -1,0 +1,17 @@
+.form__input {
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    padding: 0 0 2px 0;
+    width: 100%;
+    margin-top: 16px;
+    font-weight: 400;
+    font-family: "RobotoSlab", "Georgia", serif;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: #F8F8F5;
+}
+
+input::-webkit-input-placeholder { color: #D0D0CEed; }
+input::-moz-placeholder { color: #D0D0CEed; }

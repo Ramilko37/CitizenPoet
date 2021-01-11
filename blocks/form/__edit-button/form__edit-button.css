@@ -1,0 +1,9 @@
+.form__edit-button {
+    position: absolute;
+    top: 18px;
+    right: 5px;
+  }
+  
+  .form__edit-button:hover {
+    cursor: pointer;
+  }

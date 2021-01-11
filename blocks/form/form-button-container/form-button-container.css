@@ -1,0 +1,6 @@
+.form-button-container {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - (56px*2));
+    margin: 0 auto;
+}
